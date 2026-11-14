@@ -1,0 +1,3439 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Kimberly & Jesús Andrés</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+    html {
+    scroll-behavior: smooth;
+}
+    
+    body {
+        background: linear-gradient(
+            145deg,
+            #FFFFFF 0%,
+            #F3F1EF 50%,
+            #FFFFFF 100%
+);
+        color: #526783;
+        text-align: center;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0 14px;
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 52px;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 60px;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    
+    .flores {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: auto;
+        transform: rotate(180deg);
+    }
+
+    .flores-derecha {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 250px;
+        height: auto;
+    }
+
+    .frase {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 23px;
+        font-style: italic;
+        line-height: 1.6;
+        max-width: 550px;
+        margin: 45px auto 0;
+        padding: 0 15px;
+        letter-spacing: 0.5px;
+        color: #2345A0;
+    }
+
+    .bienvenida {
+    min-height: auto;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 60px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #F8F8FA;
+}
+
+
+/* Animación de bienvenida */
+
+@keyframes aparecerBienvenida {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bienvenida .animar-bienvenida {
+    opacity: 1;
+}
+
+.bienvenida.animacion-preparada .animar-bienvenida {
+    opacity: 0;
+}
+
+.bienvenida.animacion-activa .animar-bienvenida {
+    animation: aparecerBienvenida 1.5s ease forwards;
+}
+
+/* Aparición escalonada */
+
+.bienvenida.animacion-activa h2 {
+    animation-delay: 0s;
+}
+
+.bienvenida.animacion-activa .anillos-boda {
+    animation-delay: 0.8s;
+}
+
+.bienvenida.animacion-activa p:first-of-type {
+    animation-delay: 1.6s;
+}
+
+.bienvenida.animacion-activa p:last-of-type {
+    animation-delay: 2.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bienvenida.animacion-activa .animar-bienvenida {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+    .bienvenida h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 36px;
+        font-weight: 400;
+        color: #2345A0;
+        margin-bottom: 25px;
+    }
+
+    .anillos-boda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -15px auto 5px;
+}
+
+.anillos-boda .imagen-anillos {
+    width: clamp(190px, 32vw, 240px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+    .bienvenida p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.6;
+        color: #52617A;
+        letter-spacing: 0.3px;
+    }
+
+    .bienvenida p:last-child {
+    font-size: clamp(23px, 5.5vw, 28px);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.4;
+    color: #43546D;
+    margin-top: 30px;
+}
+
+
+.cuenta-regresiva {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 55px 15px 45px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* Separador decorativo del contador */
+
+.separador-reloj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.separador-reloj svg {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Mensaje debajo de la cuenta regresiva */
+
+.mensaje-preparate {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(26px, 6vw, 34px);
+    font-style: italic;
+    font-weight: 500;
+    color: #526783;
+    text-align: center;
+    margin: 30px auto 0;
+    line-height: 1.4;
+    min-height: 1.4em;
+}
+
+.cuenta-regresiva h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(25px, 5.5vw, 32px);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #526783;
+    margin-bottom: 30px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contador div {
+    background-color: #FFFFFF;
+    border: 1px solid #B5BECC;
+    border-radius: 10px;
+    padding: 20px 12px;
+    min-width: 65px;
+}
+
+.contador span {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    color: #43546D;
+    font-weight: 700;
+    -webkit-text-stroke: 0.5px #526783;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+
+.contador p {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #52617A;
+    margin-bottom: 0;
+}
+
+.ceremonia h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    font-weight: normal;
+    color: #52617A;
+    margin-bottom: 30px;
+}
+
+.ceremonia h3,
+.recepcion h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #52617A;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.ceremonia > p:first-of-type,
+.recepcion > p:first-of-type {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #52617A;
+    text-align: center;
+}
+
+.ceremonia .direccion,
+.recepcion .direccion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #52617A;
+    letter-spacing: 1px;
+}
+
+.ceremonia .fecha-ceremonia,
+.ceremonia .hora-ceremonia,
+.recepcion .hora-recepcion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #52617A;
+    letter-spacing: 1px;
+}
+
+/* Botón de ubicación */
+
+.boton-ubicacion {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background-color: #52617A;
+    color: #FFFFFF;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    text-decoration: none;
+    border: 1px solid #52617A;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.boton-ubicacion:hover {
+    background-color: transparent;
+    color: #52617A;
+}
+
+
+.eventos-boda {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+.eventos-boda + .eventos-boda {
+    margin-top: 50px;
+}
+
+
+.icono-iglesia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+}
+
+.icono-iglesia svg {
+    width: 105px;
+    height: 105px;
+    display: block;
+}
+
+
+.icono-recepcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+}
+
+.icono-recepcion svg {
+    display: block;
+    width: 115px;
+    height: 115px;
+}
+
+
+.eventos-boda > section {
+    min-width: 0;
+    padding-bottom: 35px;
+}
+
+
+.portada {
+    min-height: 100svh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    border: none;
+    outline: none;
+    outline-offset: -9px;
+    background-color: #F8F8FA;
+}
+
+.foto-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    max-height: 340px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: #F8F8FA;
+}
+
+.foto-superior img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    filter: sepia(0.08) brightness(0.92);
+    opacity: 0.75;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.foto-superior::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 65px;
+    border: none;
+    background: #F8F8FA;
+    transform: none;
+    clip-path: shape(
+    from 0% 20%,
+    curve to 50% 65% with 25% 5%,
+    curve to 100% 20% with 75% 95%,
+    line to 100% 100%,
+    line to 0% 100%,
+    close
+);
+
+    pointer-events: none;
+}
+
+.portada h1 {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    left: 50%;
+    translate: -50% 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0;
+
+    z-index: 3;
+
+    font-size: clamp(24px, 7vw, 40px);
+    line-height: 1.2;
+    white-space: normal;
+    letter-spacing: -1.5px;
+
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 4x rgba(0, 0, 0, 0.45);
+}
+
+.nombres-portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 0;
+    font-size: clamp(38px, 11vw, 54px) !important;
+    z-index: 5;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.nombres-portada span {
+    display: block;
+    line-height: 1.2;
+    position: static;
+    transform: none;
+}
+
+.nombres-portada .ampersand {
+    font-size: 0.65em;
+    margin: 3px 0;
+}
+
+.fecha-portada {
+    position: absolute;
+    top: 69%;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #71819A;
+    margin: 0;
+}
+
+.portada h2 {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    line-height: 1.2;
+    font-size: clamp(42px, 10vw, 68px);
+    white-space: nowrap;
+    width: max-content;
+    max-width: 95%;
+}
+
+.portada h1 {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(
+        135deg,
+        #43546D,
+        #7C8DA5,
+        #526783,
+        #A1ADBD,
+        #43546D
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.portada h2 {
+    background: linear-gradient(135deg, #43546D, #7C8DA5, #526783, #A1ADBD, #43546D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 90%;
+}
+
+.separador-portada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 220px;
+    max-width: 80%;
+    margin-top: 30px;
+}
+
+.separador-portada::before,
+.separador-portada::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #526783,
+        #A7B1BF,
+        #526783
+    );
+}
+
+.separador-portada span {
+    color: #526783;
+    font-size: 14px;
+}
+
+.deslizar-portada {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #7C899B;
+}
+
+.deslizar-portada span {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.deslizar-portada p {
+    margin: 6px 0 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.flecha-deslizar {
+    display: block;
+    margin: 0 auto;
+    animation: flechaBajar 2s ease-in-out infinite;
+}
+
+@keyframes flechaBajar {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flecha-deslizar {
+        animation: none;
+    }
+}
+
+.portada::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    pointer-events: none;
+}
+
+.portada::after {
+    bottom: 17px;
+    right: 17px;
+    border-bottom: 2px solid #9AA7B8;
+    border-right: 2px solid #9AA7B8;
+}
+
+.bienvenida h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 7.5vw, 40px);
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #43546D;
+    margin-bottom: 24px;
+}
+
+#inicio-invitacion {
+    scroll-margin-top: 0px;
+}
+
+.introduccion-romantica {
+    scroll-margin-top: 0;
+    background: #DCE4EF;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 55px 12px;
+    margin: 0 auto;
+    max-width: 650px;
+    box-sizing: border-box;
+}
+
+.introduccion-romantica .frase {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 5.8vw, 30px);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0;
+    color: #34465F;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Reservar espacio para la frase romántica */
+
+.contenedor-frase {
+    display: grid;
+    width: 100%;
+}
+
+.frase-reserva,
+.frase-escritura {
+    grid-area: 1 / 1;
+    min-width: 0;
+}
+
+.frase-reserva {
+    visibility: hidden;
+}
+
+.frase-escritura {
+    position: relative;
+}
+
+#frase-animada {
+    white-space: pre-wrap;
+}
+
+.introduccion-romantica::before {
+    content: "◆";
+    display: block;
+    width: 90px;
+    margin: 0 auto 22px;
+    color: #9AA7B8;
+    font-size: 11px;
+    text-align: center;
+    background:
+        linear-gradient(#B5BECC, #B5BECC) left center / 35px 1px no-repeat,
+        linear-gradient(#B5BECC, #B5BECC) right center / 35px 1px no-repeat;
+}
+
+.introduccion-romantica::after {
+    content: "◆";
+    display: block;
+    width: 90px;
+    margin: 22px auto 0;
+    color: #9AA7B8;
+    font-size: 11px;
+    text-align: center;
+    background:
+        linear-gradient(#B5BECC, #B5BECC) left center / 35px 1px no-repeat,
+        linear-gradient(#B5BECC, #B5BECC) right center / 35px 1px no-repeat;
+}
+
+.fecha-dia-semana {
+    display: block;
+    width: 160px;
+    height: 55px;
+    margin: 0 auto;
+    overflow: visible;
+    transform: translateY(20px);
+}
+
+.fecha-completa {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.fecha-mes,
+.fecha-anio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 3.8vw, 20px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #71819A;
+}
+.fecha-anio {
+    font-size: clamp(20px, 5vw, 24px);
+}
+
+.fecha-numero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(75px, 22vw, 120px);
+    font-weight: 400;
+    line-height: 0.9;
+    color: #43546D;
+}
+
+@media (max-width: 600px) {
+    .ceremonia h2,
+    .recepcion h2 {
+        font-size: 29px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+    
+/* Padrinos: nombres adaptados a celular */
+
+.nombres-padrinos {
+    gap: 10px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.nombres-padrinos p {
+    font-size: clamp(15px, 4.2vw, 19px);
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+    }
+
+.portada h1 {
+    font-size: clamp(42px, 12vw, 56px);
+    margin-top: 0;
+}
+
+.portada h2 {
+    font-size: clamp(48px, 13vw, 60px);
+    }
+
+
+    .ceremonia > p:first-of-type,
+    .recepcion > p:first-of-type {
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.3px;
+        padding: 0 10px;
+        margin: 0 auto 28px;
+        text-align: center;
+    }
+
+
+    
+.ceremonia h3,
+.recepcion h3 {
+    font-size: clamp(25px, 6vw, 32px);
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+    .ceremonia .direccion,
+    .ceremonia .fecha-ceremonia,
+    .ceremonia .hora-ceremonia,
+    .recepcion .hora-recepcion {
+        font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .boton-ubicacion {
+        font-size: 13px;
+        padding: 10px 12px;
+        margin-top: 15px;
+        white-space: nowrap;
+    }
+
+    .flores-derecha {
+        width: 130px;
+        max-width: 35%;
+        right: 0;
+        bottom: 0;
+    }
+
+    .contador {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px auto;
+}
+
+    .contador > div {
+        min-width: 0;
+        padding: 12px 3px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contador span {
+        font-size: 34px;
+    }
+
+    .contador p {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .flores,
+    .flores-derecha {
+        display: none;
+    }
+
+    body {
+        background: linear-gradient(
+            145deg,
+            #FFFFFF 0%,
+            #F3F1FF 50%,
+            #FFFFFF 100%
+        );
+        background-attachment: fixed;
+    }
+
+    body > h2 {
+        font-weight: 600;
+        background: linear-gradient(
+            180deg,
+            #53647B 0%,
+            #AAB6C5 35%,
+            #65758A 65%,
+            #43536A 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    body > h1 {
+        font-size: 34px;
+        white-space: nowrap;
+    }
+
+    body > h1 {
+    font-weight: 600;
+    background: linear-gradient(
+        180deg,
+        #172C50 0%,
+        #627A9D 35%,
+        #243D68 65%,
+        #122747 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+.introduccion-romantica .frase {
+    font-size: clamp(20px, 5.8vw, 24px);
+    line-height: 1.6;
+    }
+
+.introduccion-romantica {
+    min-height: 100svh;
+    height: auto;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    box-sizing: border-box;
+    }
+}
+
+@media (min-width: 601px) {
+    .nombres-portada {
+        top: 135px;
+    }
+}
+
+/* Sección Nuestra historia */
+.nuestra-historia {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px 20px;
+    text-align: center;
+    background: #CBD5E1;
+}
+
+.nuestra-historia h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 7vw, 44px);
+    font-weight: 600;
+    color: #43546D;
+    margin: 0 0 35px;
+}
+
+.marco-fotografia {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 9px;
+    border: 1px solid #A7B1BF;
+    outline: 1px solid #D9DEE5;
+    outline-offset: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 12px 35px rgba(67, 84, 109, 0.12);
+}
+
+.marco-fotografia img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.frase-historia {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(21px, 5.5vw, 27px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    color: #526783;
+    max-width: 500px;
+    margin: 35px auto 0;
+    padding: 0 12px;
+    text-align: center;
+}
+
+@keyframes aparecerFotografia {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.marco-fotografia.animada {
+    animation: aparecerFotografia 1.5s ease-out both;
+}
+
+@media (min-width: 768px) {
+    .portada h1 {
+        top: 22%;
+    }
+
+    .fecha-portada {
+    top: 63%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.75);
+    transform-origin: top center;
+    }
+  .portada h2 {
+    transform: translate(-50%, -35px);
+    }
+
+.separador-portada {
+    transform: translateY(-35px);
+    }
+}
+
+
+/* SECCIÓN PADRINOS DE VELACIÓN */
+
+.seccion-padrinos {
+    background: #F8F8FA;
+    padding: 65px 25px 45px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.subtitulo-padrinos {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8795A8;
+    margin-bottom: 20px;
+}
+
+.seccion-padrinos h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: 500;
+    color: #263B59;
+    margin-bottom: 20px;
+}
+
+
+.adorno-padrinos {
+    color: #A9B6C7;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0 30px;
+}
+
+.adorno-padrinos span {
+    display: inline-block;
+}
+
+.mensaje-padrinos {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #526783;
+    max-width: 480px;
+    margin: 0 auto 40px;
+}
+
+.seccion-padrinos h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #263B59;
+    margin-bottom: 25px;
+}
+
+
+/* Nombres de los padrinos en dos columnas */
+
+.nombres-padrinos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 650px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.nombres-padrinos p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(16px, 4vw, 25px);
+    font-style: italic;
+    color: #526783;
+    line-height: 1.5;
+    margin: 0;
+    min-width: 0;
+}
+
+.nombres-padrinos span {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    color: #A9B6C7;
+    margin: 12px 0;
+}
+
+
+/* SECCIÓN DE NUESTROS PADRES */
+
+.seccion-padres {
+    background: #F8F8FA;
+    padding: 65px 25px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.subtitulo-padres {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #A9B6C7;
+    margin-bottom: 15px;
+}
+
+.seccion-padres h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(34px, 7vw, 46px);
+    font-weight: 500;
+    color: #263B59;
+    margin: 0 0 20px;
+}
+
+.adorno-padres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+}
+
+.adorno-padres > span:not(.rombo-padres) {
+    width: 55px;
+    height: 1px;
+    background: #A9B6C7;
+}
+
+
+.rombo-padres {
+    color: #A9B6C7;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.frase-padres {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(15px, 4vw, 19px);
+    font-style: italic;
+    line-height: 1.8;
+    color: #526783;
+    max-width: 550px;
+    margin: 20px auto 40px;
+}
+
+.grupo-padres {
+    margin: 35px auto;
+    max-width: 650px;
+}
+
+.grupo-padres h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(24px, 5vw, 30px);
+    font-weight: 500;
+    color: #263B59;
+    margin-bottom: 25px;
+}
+
+.nombres-padres {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 12px;
+}
+
+.nombres-padres p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(16px, 4vw, 25px);
+    font-style: italic;
+    line-height: 1.5;
+    color: #526783;
+    margin: 0;
+    min-width: 0;
+}
+
+
+/* ANIMACIÓN DE LOS PADRES */
+
+.seccion-padres .animar-padres {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seccion-padres.animacion-preparada .animar-padres {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.seccion-padres.animacion-activa .animar-padres {
+    animation: aparecerPadres 1.2s ease forwards;
+}
+
+@keyframes aparecerPadres {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aparición escalonada */
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.seccion-padres.animacion-activa .animar-padres:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+
+/* ANIMACIÓN DE LOS PADRINOS */
+
+.seccion-padrinos .animar-padrinos {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seccion-padrinos.animacion-preparada .animar-padrinos {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos {
+    animation: aparecerPadrinos 1.2s ease forwards;
+}
+
+@keyframes aparecerPadrinos {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMACIÓN GENERAL DE APARICIÓN */
+
+
+.animar-suave {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animar-suave.animacion-preparada {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.animar-suave.animacion-activa {
+    animation: aparecerSuave 3s ease forwards;
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Orden de aparición de los padrinos */
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.seccion-padrinos.animacion-activa .animar-padrinos:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+
+/* CÓDIGO DE VESTIMENTA */
+
+.codigo-vestimenta {
+    background: linear-gradient(
+    180deg,
+    #F8F8FA 0%,
+    #EDF1F7 50%,
+    #F8F8FA 100%
+);
+    padding: 75px 25px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.subtitulo-vestimenta {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #A9B6C7;
+    margin-bottom: 15px;
+}
+
+.codigo-vestimenta h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(42px, 8vw, 60px);
+    font-weight: normal;
+    color: #263B59;
+    line-height: 1.3;
+    margin: 0 0 15px;
+}
+
+.tipo-vestimenta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #526783;
+    margin: 15px auto 30px;
+}
+
+
+/* SEPARADOR DECORATIVO DE VESTIMENTA */
+
+.adorno-vestimenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px auto 25px;
+}
+
+.adorno-vestimenta > span:not(.corazon-vestimenta) {
+    width: 45px;
+    height: 1px;
+    background: #A9B6C7;
+}
+
+.corazon-vestimenta {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1;
+    color: #A9B6C7;
+}
+
+.siluetas-vestimenta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 420px;
+    margin: 30px auto;
+}
+
+.vestimenta-caballero,
+.vestimenta-dama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+
+/* COLOR RESERVADO PARA DAMAS Y CABALLEROS DE HONOR */
+
+.muestra-color-honor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 15px auto 8px;
+}
+
+.circulo-azul-honor {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #151C3D;
+    border: 2px solid #A9B6C7;
+    box-shadow: 0 2px 8px rgba(38, 59, 89, 0.12);
+}
+
+.muestra-color-honor p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #526783;
+    margin: 0;
+}
+
+.nota-vestimenta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(19px, 4vw, 24px);
+    font-style: italic;
+    line-height: 1.6;
+    color: #526783;
+    max-width: 500px;
+    margin: 35px auto 0;
+}
+
+
+/* Horarios de ceremonia y recepción */
+.ceremonia .hora-ceremonia,
+.recepcion .hora-recepcion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 6vw, 40px);
+    font-weight: 600;
+    color: #263B59;
+    line-height: 1.2;
+}
+
+
+/* Animación de ceremonia y recepción */
+.animar-evento {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.animar-evento.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Separación entre cuenta regresiva y ceremonia */
+.eventos-boda:has(> .ceremonia) {
+    margin-top: 65px;
+}
+
+
+/* Pantalla inicial de bienvenida */
+.pantalla-bienvenida {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    background: linear-gradient(145deg, #151C3D, #344B6B);
+    transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+}
+
+.contenido-bienvenida-musical {
+    width: 100%;
+    max-width: 500px;
+}
+
+.detalle-bienvenida {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #D5DCE7;
+    margin-bottom: 35px;
+}
+
+.contenido-bienvenida-musical h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(54px, 12vw, 85px);
+    font-weight: normal;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.contenido-bienvenida-musical h1 span {
+    color: #C0C8D5;
+}
+
+.fecha-bienvenida {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    letter-spacing: 4px;
+    color: #D5DCE7;
+    margin: 25px 0 45px;
+}
+
+#abrir-invitacion {
+    padding: 14px 38px;
+    border: 1px solid #C0C8D5;
+    border-radius: 30px;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#abrir-invitacion:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.mensaje-musica {
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: #D5DCE7;
+}
+
+
+/* Botón musical flotante */
+#boton-musica {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #263B59;
+    color: #FFFFFF;
+    border: 2px solid #A9B6C7;
+    border-radius: 50%;
+
+    box-shadow: 0 4px 15px rgba(38, 59, 89, 0.25);
+    cursor: pointer;
+    z-index: 1000;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+#boton-musica:hover {
+    transform: scale(1.08);
+    background: #344B6B;
+}
+
+#icono-musica {
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* Solapa triangular del sobre */
+.pantalla-bienvenida {
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+.solapa-sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34%;
+
+    background: linear-gradient(
+        160deg,
+        #405879,
+        #263B59
+    );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin: top center;
+    z-index: 1;
+
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+
+    transition: transform 1.4s ease;
+}
+
+.contenido-bienvenida-musical {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Animación de apertura del sobre */
+.pantalla-bienvenida.sobre-abierto .solapa-sobre {
+    transform: rotateX(180deg);
+}
+
+
+/* Doblez lateral izquierdo */
+.pliegue-izquierdo {
+    position: absolute;
+    inset: 0;
+    background: #344B6B;
+    clip-path: polygon(0 22%, 52% 50%, 0 78%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Doblez lateral derecho */
+.pliegue-derecho {
+    position: absolute;
+    inset: 0;
+    background: #405879;
+    clip-path: polygon(100% 22%, 48% 50%, 100% 78%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Doblez inferior */
+.pliegue-inferior {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #405879, #263B59);
+    clip-path: polygon(0 78%, 50% 50%, 100% 78%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* Fondo donde se presenta el sobre */
+.pantalla-bienvenida {
+    background: #F2F0E8;
+}
+
+/* Cuerpo del sobre */
+.cuerpo-sobre {
+    position: relative;
+    perspective: 1000px;
+    width: min(90vw, 420px);
+    aspect-ratio: 1.45 / 1;
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        145deg,
+        #263B59,
+        #344B6B
+    );
+
+    border: 1px solid #A9B6C7;
+    box-shadow: 0 15px 35px rgba(21, 28, 61, 0.25);
+    overflow: visible;
+}
+
+/* Ajustar los pliegues al cuerpo del sobre */
+
+/* Solapa superior del sobre */
+.cuerpo-sobre .solapa-sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52%;
+
+    background: linear-gradient(
+        160deg,
+        #506888,
+        #344B6B
+    );
+
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+    transform-origin: top center;
+    z-index: 3;
+
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Abrir la solapa hacia arriba */
+.pantalla-bienvenida.sobre-abierto .solapa-sobre {
+    transform: rotateX(180deg);
+}
+
+.cuerpo-sobre .pliegue-izquierdo {
+    clip-path: polygon(0 0, 52% 50%, 0 100%);
+}
+
+.cuerpo-sobre .pliegue-derecho {
+    clip-path: polygon(100% 0, 48% 50%, 100% 100%);
+}
+
+.cuerpo-sobre .pliegue-inferior {
+    clip-path: polygon(0 100%, 50% 52%, 100% 100%);
+}
+
+/* Mantener el texto centrado dentro del sobre */
+.cuerpo-sobre .contenido-bienvenida-musical {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    width: 100%;
+    max-width: none;
+    padding: 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Adaptar el contenido al tamaño del sobre */
+.cuerpo-sobre .detalle-bienvenida {
+    font-size: 9px;
+    margin-bottom: 8px;
+}
+
+.cuerpo-sobre .contenido-bienvenida-musical h1 {
+    font-size: clamp(38px, 9vw, 58px);
+    line-height: 1.1;
+}
+
+.cuerpo-sobre .fecha-bienvenida {
+    font-size: 16px;
+    margin: 8px 0 12px;
+}
+
+.cuerpo-sobre #abrir-invitacion {
+    padding: 8px 22px;
+    font-size: 19px;
+}
+
+.cuerpo-sobre .mensaje-musica {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* Sello plateado del sobre */
+.sello-sobre {
+    position: relative;
+    z-index: 10;
+    transform: translateY(-25px);
+    transition: opacity 0.3s ease;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 25%,
+        #F4F6F9 0%,
+        #C7D0DC 30%,
+        #8D9DB2 70%,
+        #60738E 100%
+    );
+
+/* El sello desaparece al abrir el sobre */
+.pantalla-bienvenida.sobre-abierto .sello-sobre {
+    opacity: 0;
+}
+
+    border: 3px double #E7ECF3;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.3),
+        inset 0 2px 5px rgba(255, 255, 255, 0.7),
+        inset 0 -3px 6px rgba(38, 59, 89, 0.3);
+}
+
+
+.sello-sobre span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: #263B59;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+}
+
+/* Datos personalizados del invitado */
+.datos-invitado {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    z-index: 11;
+}
+.nombre-invitado {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #F2F0E8;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.pases-invitado {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #C0CAD8;
+    margin: 4px 0 0;
+}
+
+/* Separación entre el sello y el botón */
+.cuerpo-sobre #abrir-invitacion {
+    margin-top: 8px;
+    transform: translateY(-12px);
+    background: #263B59;
+    color: #F2F0E8;
+    border: 1px solid #A9B6C7;
+    position: relative;
+    z-index: 12;
+}
+
+
+/* Tarjeta que sale del sobre */
+.tarjeta-invitacion {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 85%;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        #E9E8E3
+    );
+
+    border: 2px solid #B7C0CC;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    z-index: 0;
+    transition: transform 1.2s ease-in-out;
+}
+
+/* Contenido de la tarjeta */
+.contenido-tarjeta {
+    padding: 12px;
+}
+
+.detalle-tarjeta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #526783;
+    margin-bottom: 12px;
+}
+
+.contenido-tarjeta h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(30px, 7vw, 45px);
+    font-weight: normal;
+    color: #263B59;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.contenido-tarjeta h2 span {
+    color: #8D9DB2;
+}
+
+.fecha-tarjeta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #526783;
+    margin-top: 15px;
+}
+
+
+/* La tarjeta sale del sobre al abrirlo */
+.pantalla-bienvenida.sobre-abierto .tarjeta-invitacion {
+    transform: translateY(-75%);
+    transition: transform 1.1s ease-in-out 0.9s;
+}
+
+/* La solapa pasa detrás de la tarjeta después de abrirse */
+.pantalla-bienvenida.sobre-abierto .solapa-sobre {
+    z-index: -1;
+    transition: transform 0.6s ease-in-out,
+                z-index 0s linear 0.6s;
+}
+
+/* SECCIÓN DE CONFIRMACIÓN DE ASISTENCIA */
+
+.confirmacion-asistencia {
+    background: #F2F0E8;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contenido-confirmacion {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    background: #FFFFFF;
+    border: 1px solid #B7C0CC;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(38, 59, 89, 0.08);
+}
+
+.contenido-confirmacion h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: #263B59;
+    margin-bottom: 20px;
+}
+
+.mensaje-confirmacion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #526783;
+    margin-bottom: 30px;
+}
+
+#nombre-confirmacion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #263B59;
+    margin-bottom: 5px;
+}
+
+#pases-confirmacion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: #526783;
+    margin-bottom: 25px;
+}
+
+.contenido-confirmacion label {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #263B59;
+    margin-bottom: 12px;
+}
+
+#cantidad-asistentes {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: #263B59;
+    background: #F8F7F4;
+    border: 1px solid #A9B6C7;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+#boton-confirmar {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    background: #263B59;
+    color: #FFFFFF;
+    border: 1px solid #A9B6C7;
+    border-radius: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#boton-confirmar:hover {
+    background: #405A7D;
+}
+
+#mensaje-agradecimiento {
+    margin: 28px auto 0;
+    padding: 22px 25px;
+    max-width: 480px;
+    background: linear-gradient(145deg, #FFFFFF, #F2F0E8);
+    border: 1px solid #A9B6C7;
+    border-radius: 12px;
+    color: #263B59;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(38, 59, 89, 0.08);
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Botón flotante de música -->
+<button id="boton-musica" type="button"
+        aria-label="Reproducir música">
+    <span id="icono-musica">♫</span>
+</button>
+
+<!-- Música de la invitación -->
+<audio id="musica-boda" preload="auto">
+    <source src="musica/starlight.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Pantalla de bienvenida -->
+<div id="pantalla-bienvenida" class="pantalla-bienvenida">
+  <div class="cuerpo-sobre">  
+
+
+<!-- Tarjeta que saldrá del sobre -->
+<div class="tarjeta-invitacion" aria-hidden="true">
+    <div class="contenido-tarjeta">
+        <p class="detalle-tarjeta">NUESTRA BODA</p>
+        <h2>Kimberly <span>&amp;</span> Andrés</h2>
+        <p class="fecha-tarjeta">26 · 12 · 2026</p>
+    </div>
+</div>
+
+<!-- Solapa animada del sobre -->
+<div class="solapa-sobre" aria-hidden="true"></div>
+
+
+<!-- Pliegues del sobre -->
+<div class="pliegue-izquierdo" aria-hidden="true"></div>
+<div class="pliegue-derecho" aria-hidden="true"></div>
+<div class="pliegue-inferior" aria-hidden="true"></div>
+
+
+    <div class="contenido-bienvenida-musical">
+
+        
+<!-- Sello de los novios -->
+<div class="sello-sobre">
+    <span>K&amp;A</span>
+</div>
+
+<!-- Botón para abrir la invitación -->
+<button id="abrir-invitacion" type="button">
+    Abrir invitación
+</button>
+
+<div class="datos-invitado">
+    <p class="nombre-invitado" id="nombre-invitado">
+        Familia Rodríguez Hernández
+    </p>
+    <p class="pases-invitado" id="pases-invitado">
+        4 pases
+    </p>
+</div>
+
+    </div>
+</div> <!-- Cierre del cuerpo del sobre -->
+</div>
+
+<div class="portada">
+
+    <div class="foto-superior">
+        <img src="Imagenes/foto-portada.jpg" alt="Kimberly y Andrés">
+    </div>
+
+    <div class="fecha-portada">
+    <svg class="fecha-dia-semana" viewBox="0 0 200 65"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-label="Sábado" role="img">
+
+    <defs>
+        <path id="arco-sabado"
+              d="M 25,55 Q 100,-5 175,55" />
+    </defs>
+
+    <text fill="#526783"
+          font-family="Cormorant Garamond, serif"
+          font-size="24"
+          font-weight="600"
+          letter-spacing="4">
+
+        <textPath href="#arco-sabado"
+                  startOffset="50%"
+                  text-anchor="middle">
+            SÁBADO
+        </textPath>
+
+    </text>
+</svg>
+
+    <div class="fecha-completa">
+        <span class="fecha-mes">DICIEMBRE</span>
+        <span class="fecha-numero">26</span>
+        <span class="fecha-anio">2026</span>
+    </div>
+</div>
+
+    <h1 class="nombres-portada">
+    <span>Kimberly</span>
+    <span class="ampersand">&amp;</span>
+    <span>Andrés</span>
+</h1>
+
+    <h2>Nuestra Boda</h2>
+
+    <div class="separador-portada">
+        <span>◆</span>
+    </div>
+
+    <div class="deslizar-portada">
+        <a href="#inicio-invitacion" aria-label="Ir al inicio de la invitación">
+            <svg class="flecha-deslizar"
+            width="28"
+            height="34"
+            viewBox="0 0 28 34"
+            fill="none"
+            aria-hidden="true">
+            <path d="M14 3 V27 M5 18 L14 27 L23 18"
+                stroke="#526783"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <p>Desliza para descubrir</p>
+    </div>
+</div>
+
+
+<div id="inicio-invitacion" class="introduccion-romantica">
+
+    <div class="contenedor-frase">
+
+        <p class="frase frase-reserva" aria-hidden="true">
+            «Entre los caminos de la vida, los desafíos y el paso del tiempo, el amor siempre encuentra la manera de llevarnos a donde pertenece nuestro corazón».
+        </p>
+
+        <p class="frase frase-escritura" id="frase-animada">
+            «Entre los caminos de la vida, los desafíos y el paso del tiempo, el amor siempre encuentra la manera de llevarnos a donde pertenece nuestro corazón».
+        </p>
+
+    </div>
+
+</div>
+
+<section class="bienvenida" id="bienvenida">
+
+    <h2 class="animar-bienvenida">
+        Con la bendición de Dios
+    </h2>
+
+    <div class="anillos-boda animar-bienvenida">
+        <img src="Imagenes/anillos-boda.png"
+             alt="Anillos de matrimonio plateados entrelazados"
+             class="imagen-anillos">
+    </div>
+
+    <p class="animar-bienvenida">
+        Hemos decidido comenzar una nueva etapa de nuestras vidas.
+        Nos llena de alegría compartir este día tan especial
+        con las personas que forman parte de nuestra historia.
+    </p>
+
+    <p class="animar-bienvenida">
+        ¡Será un honor contar con tu presencia!
+    </p>
+
+</section>
+
+<section class="nuestra-historia">
+    <h2>Nuestra historia</h2>
+
+    <div class="marco-fotografia">
+        <img
+            src="Imagenes/boda-civil.png"
+            alt="Kimberly y Andrés celebrando su amor">
+    </div>
+
+<p class="frase-historia">
+    «Hay historias que comienzan con un encuentro
+    y se convierten en un para siempre…»
+</p>
+
+</section>
+
+
+<!-- SECCIÓN DE NUESTROS PADRES -->
+
+<section class="seccion-padres" id="padres">
+
+    <p class="subtitulo-padres animar-padres">
+        CON EL AMOR Y LA BENDICIÓN DE NUESTROS PADRES
+    </p>
+
+    <h2 class="animar-padres">Nuestros padres</h2>
+
+    <div class="adorno-padres animar-padres">
+        <span></span>
+        <span class="rombo-padres">♡</span>
+        <span></span>
+    </div>
+
+    <p class="frase-padres animar-padres">
+        Con su amor, ejemplo y bendición,
+        nos acompañan en el comienzo
+        de esta nueva etapa.
+    </p>
+
+    <div class="grupo-padres animar-padres">
+        <h3>Padres de la novia</h3>
+
+        <div class="nombres-padres">
+            <p>Iliana Zayas<br>Flores</p>
+            <p>Miguel Ángel<br>Romero Mota</p>
+        </div>
+    </div>
+
+    <div class="grupo-padres animar-padres">
+        <h3>Padres del novio</h3>
+
+        <div class="nombres-padres">
+            <p>Verónica Durán<br>Arroyo</p>
+            <p>Raúl Hernández<br>Ayala</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="seccion-padrinos" id="padrinos">
+
+    <p class="subtitulo-padrinos animar-padrinos">
+        UNIDOS POR EL AMOR Y LA FE
+    </p>
+
+    <h2 class="animar-padrinos">Nuestros padrinos</h2>
+
+    
+<div class="adorno-padrinos animar-padrinos">
+    <svg
+        width="48"
+        height="64"
+        viewBox="0 0 48 64"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+
+        <path
+            d="M24 5 V59 M7 22 H41"
+            stroke="#A9B6C7"
+            stroke-width="1.8"
+            stroke-linecap="round"/>
+
+        <path
+            d="M24 2 L27 5 L24 8 L21 5 Z"
+            fill="#A9B6C7"/>
+
+        <path
+            d="M24 56 L27 59 L24 62 L21 59 Z"
+            fill="#A9B6C7"/>
+
+        <path
+            d="M4 22 L7 19 L10 22 L7 25 Z"
+            fill="#A9B6C7"/>
+
+        <path
+            d="M38 22 L41 19 L44 22 L41 25 Z"
+            fill="#A9B6C7"/>
+
+    </svg>
+</div>
+
+    <p class="mensaje-padrinos animar-padrinos">
+        Con cariño y gratitud, agradecemos a quienes
+        nos acompañarán como testigos de nuestra
+        unión ante Dios.
+    </p>
+
+    <h3 class="animar-padrinos">Padrinos de velación</h3>
+
+    
+    <div class="nombres-padrinos animar-padrinos">
+        <p>Blanca Luz<br>Salamanca Arroyo</p>
+        <p>Andrés Ramón<br>López Zanabria</p>
+    </div>
+
+
+</section>
+
+<section class="cuenta-regresiva">
+    
+<div class="separador-reloj">
+    <svg viewBox="0 0 240 50"
+         width="240"
+         height="50"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
+
+        <path d="M5 25 H94 M146 25 H235"
+              stroke="#A9B6C7"
+              stroke-width="1"/>
+
+        <circle cx="120" cy="25" r="19"
+                stroke="#A9B6C7"
+                stroke-width="1.6"/>
+
+        <path d="M120 12 V25 L129 31"
+              stroke="#526783"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+
+        <circle cx="120" cy="25" r="2"
+                fill="#526783"/>
+    </svg>
+</div>
+
+    
+<h2 class="animar-suave">
+    El tiempo sigue su curso, y nuestro para siempre comienza en...
+</h2>
+
+    <div class="contador">
+        <div>
+            <span id="dias">00</span>
+            <p>Días</p>
+        </div>
+
+        <div>
+            <span id="horas">00</span>
+            <p>Horas</p>
+        </div>
+
+        <div>
+            <span id="minutos">00</span>
+            <p>Minutos</p>
+        </div>
+
+        <div>
+            <span id="segundos">00</span>
+            <p>Segundos</p>
+        </div>
+    </div>
+
+    <p class="mensaje-preparate" id="mensaje-preparate">
+        Prepárate...
+    </p>
+
+</section>
+
+<div class="eventos-boda">
+<section class="ceremonia animar-evento">
+    
+<div class="icono-iglesia">
+    <svg viewBox="0 0 120 115"
+         width="105"
+         height="105"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
+
+        <g stroke="#A9B6C7"
+           stroke-width="1.7"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+            <!-- Cruz -->
+            <path d="M60 8 V31 M50 17 H70"/>
+
+            <!-- Estructura de la iglesia -->
+            <path d="M25 100 V48 L60 27 L95 48 V100 Z"/>
+            <path d="M17 100 H103"/>
+            <path d="M21 47 L60 22 L99 47"/>
+
+            <!-- Puerta -->
+            <path d="M48 100 V76 A12 12 0 0 1 72 76 V100"/>
+
+            <!-- Ventanas -->
+            <path d="M33 56 H44 V72 H33 Z"/>
+            <path d="M76 56 H87 V72 H76 Z"/>
+
+            <!-- Cruz central -->
+            <path d="M60 42 V57 M53 49 H67"/>
+
+        </g>
+    </svg>
+</div>
+
+    <h2>Ceremonia Religiosa</h2>
+    <p>Ante Dios y acompañados de quienes amamos, consagraremos nuestra unión, confiando en que su bendición ilumine cada paso de nuestra vida juntos.</p>
+    <h3>Templo María Madre de la Iglesia</h3>
+    <p class="direccion">Huexotitla, Puebla</p>
+    <p class="hora-ceremonia">17:00 hrs</p>
+    
+<a
+  href="https://www.google.com/maps/search/?api=1&query=Templo%20Maria%20Madre%20de%20la%20Iglesia%20Huexotitla%20Puebla"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="boton-ubicacion">
+  <svg width="19" height="19" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor"
+     stroke-width="1.5" stroke-linecap="round"
+     stroke-linejoin="round"
+     style="vertical-align: middle; margin-right: 7px;">
+    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+    <circle cx="12" cy="10" r="2.5"/>
+</svg>
+Ver ubicación
+</a>
+
+</section>
+
+</div>
+
+<div class="eventos-boda">
+    <section class="recepcion animar-evento">
+        
+<div class="icono-recepcion">
+    <svg width="105" height="105"
+         viewBox="0 0 120 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
+
+        <g stroke="#A9B6C7"
+           stroke-width="1.7"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+            <!-- Copa izquierda inclinada -->
+            <g transform="translate(4 0) rotate(15 42 55)">
+                <path d="M30 22 H54 L51 47
+                         Q49 60 42 60
+                         Q35 60 33 47 Z"/>
+                <path d="M42 60 V91"/>
+                <path d="M30 91 H54"/>
+            </g>
+
+            <!-- Copa derecha inclinada -->
+            <g transform="translate(-4 0) rotate(-15 78 55)">
+                <path d="M66 22 H90 L87 47
+                         Q85 60 78 60
+                         Q71 60 69 47 Z"/>
+                <path d="M78 60 V91"/>
+                <path d="M66 91 H90"/>
+            </g>
+
+            <!-- Destello del brindis -->
+            <path d="M60 12 V19"/>
+            <path d="M56 15.5 H64"/>
+            <path d="M51 8 L48 4"/>
+            <path d="M69 8 L72 4"/>
+
+        </g>
+    </svg>
+</div>
+
+    <h2>Recepción</h2>
+
+    <p>
+        Después de unir nuestras vidas ante Dios, comienza la celebración.
+        Los esperamos para compartir una velada llena de amor, sonrisas,
+        música y momentos que quedarán grabados en nuestros corazones.
+    </p>
+
+    <h3>Salón de Eventos San Francisco</h3>
+    
+    <p class="direccion">San Pedro Cholula, Puebla</p>
+
+    <p class="hora-recepcion">20:30 hrs</p>
+
+    
+<a
+  href="https://www.google.com/maps/search/?api=1&amp;query=Salon%20de%20Eventos%20San%20Francisco%20Cholula%20Puebla"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="boton-ubicacion">
+
+  <svg width="19" height="19" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor"
+       stroke-width="1.5"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       style="vertical-align: middle; margin-right: 7px;">
+    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+    <circle cx="12" cy="10" r="2.5"/>
+  </svg>
+
+  Ver ubicación
+</a>
+
+</section>
+
+</div>
+
+
+
+<section class="codigo-vestimenta animar-evento" id="vestimenta">
+
+    <p class="subtitulo-vestimenta">
+        PARA ESTA OCASIÓN ESPECIAL
+    </p>
+
+    <h2>Código de vestimenta</h2>
+
+    <p class="tipo-vestimenta">Formal</p>
+
+
+<div class="adorno-vestimenta">
+    <span></span>
+    <span class="corazon-vestimenta">♡</span>
+    <span></span>
+</div>
+
+<div class="siluetas-vestimenta">
+        
+    <div class="vestimenta-caballero">
+        <svg viewBox="0 0 120 190"
+            width="120"
+            height="190"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Traje formal de caballero"
+            role="img">
+
+        <g stroke="#A9B6C7"
+           stroke-width="1.6"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+            <!-- Cuello de camisa -->
+            <path d="M48 26 L60 39 L72 26"/>
+            <path d="M48 26 L53 17 H67 L72 26"/>
+
+            <!-- Corbata -->
+            <path d="M57 37 L60 42 L63 37"/>
+            <path d="M60 42 L55 78 L60 85 L65 78 Z"/>
+
+            <!-- Solapas -->
+            <path d="M48 26 L39 35 L52 65 L60 85"/>
+            <path d="M72 26 L81 35 L68 65 L60 85"/>
+
+            <!-- Saco -->
+            <path d="M48 26 L29 34 L17 94 L29 99 L38 63"/>
+            <path d="M72 26 L91 34 L103 94 L91 99 L82 63"/>
+            <path d="M38 63 L34 115 H86 L82 63"/>
+            <path d="M60 85 L54 115"/>
+            <path d="M60 85 L66 115"/>
+
+            <!-- Bolsillos -->
+            <path d="M40 87 H51"/>
+            <path d="M69 87 H80"/>
+            <path d="M72 48 H82"/>
+
+            <!-- Botones -->
+            <circle cx="60" cy="96" r="1.5"/>
+            <circle cx="60" cy="105" r="1.5"/>
+
+            <!-- Pantalón -->
+            <path d="M37 115 L35 175 H55 L60 132"/>
+            <path d="M83 115 L85 175 H65 L60 132"/>
+            <path d="M60 132 V115"/>
+
+            <!-- Zapatos -->
+            <path d="M35 175 L29 181 H55 V175"/>
+            <path d="M85 175 L91 181 H65 V175"/>
+
+        </g>
+    </svg>
+</div>
+
+        
+<div class="vestimenta-dama">
+    <svg viewBox="0 0 120 190"
+         width="120"
+         height="190"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Vestido largo formal de dama">
+
+        <g stroke="#A9B6C7"
+           stroke-width="1.6"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+            <!-- Escote -->
+            <path d="M43 29 Q50 39 60 42 Q70 39 77 29"/>
+
+            <!-- Tirantes -->
+            <path d="M43 29 L48 20"/>
+            <path d="M77 29 L72 20"/>
+
+            <!-- Cuerpo del vestido -->
+            <path d="M48 20 Q42 24 39 42 L44 75"/>
+            <path d="M72 20 Q78 24 81 42 L76 75"/>
+
+            <!-- Cintura -->
+            <path d="M44 75 Q60 81 76 75"/>
+            <path d="M45 81 Q60 86 75 81"/>
+
+            <!-- Falda larga -->
+            <path d="M45 81 Q39 122 20 175"/>
+            <path d="M75 81 Q81 122 100 175"/>
+
+            <!-- Caída de la tela -->
+            <path d="M52 85 Q48 125 43 175"/>
+            <path d="M68 85 Q72 125 77 175"/>
+            <path d="M60 87 V175"/>
+
+            <!-- Dobladillo -->
+            <path d="M20 175 Q40 181 60 177
+                     Q80 181 100 175"/>
+
+            <!-- Detalle delicado del escote -->
+            <path d="M48 20 Q60 29 72 20"/>
+
+        </g>
+    </svg>
+</div>
+
+</div>
+
+
+<div class="muestra-color-honor">
+    <span class="circulo-azul-honor"></span>
+</div>
+    
+
+<p class="nota-vestimenta">
+    Agradecemos reservar el color azul marino
+    exclusivamente para nuestras damas
+    y caballeros de honor.
+</p>
+
+</section>
+
+<script>
+
+// Los datos de los invitados se consultan desde Google Sheets.
+
+// Identificar al invitado mediante su enlace
+const parametros = new URLSearchParams(window.location.search);
+const codigoInvitado = parametros.get("invitado");
+const tokenInvitado = parametros.get("token");
+
+
+// Buscar sus datos
+let invitadoActual = null;
+function recibirInvitado(datos) {
+    if (!datos || !datos.ok) {
+        console.error("No se pudo consultar la invitación.");
+        return;
+    }
+
+    invitadoActual = {
+        codigo: datos.codigo,
+        nombre: datos.nombre,
+        pases: datos.pases
+    };
+
+    mostrarDatosInvitado();
+    mostrarDatosConfirmacion();
+    actualizarOpcionesAsistencia();
+}
+function mostrarDatosInvitado() {
+    if (!invitadoActual) return;
+
+    document.getElementById("nombre-invitado").textContent =
+        invitadoActual.nombre;
+
+    document.getElementById("pases-invitado").textContent =
+        invitadoActual.pases === 1
+            ? "1 pase"
+            : `${invitadoActual.pases} pases`;
+}
+
+mostrarDatosInvitado();
+
+// Mostrar los datos del invitado en la confirmación
+function mostrarDatosConfirmacion() {
+    if (!invitadoActual) return;
+
+    document.getElementById("nombre-confirmacion").textContent =
+        invitadoActual.nombre;
+
+    document.getElementById("pases-confirmacion").textContent =
+        invitadoActual.pases === 1
+            ? "1 pase asignado"
+            : `${invitadoActual.pases} pases asignados`;
+}
+
+document.addEventListener("DOMContentLoaded", mostrarDatosConfirmacion);
+
+// Crear opciones según los pases asignados
+function actualizarOpcionesAsistencia() {
+    const selector = document.getElementById("cantidad-asistentes");
+
+    if (!invitadoActual || !selector) return;
+    selector.innerHTML = "";
+
+    // Opción para quienes no podrán asistir
+    const noAsistire = document.createElement("option");
+    noAsistire.value = "0";
+    noAsistire.textContent = "No podré asistir";
+    selector.appendChild(noAsistire);
+
+    // Opciones de 1 hasta el máximo de pases
+    for (let i = 1; i <= invitadoActual.pases; i++) {
+        const opcion = document.createElement("option");
+        opcion.value = i;
+        opcion.textContent = i === 1 ? "1 pase" : `${i} pases`;
+        selector.appendChild(opcion);
+    }
+}
+document.addEventListener("DOMContentLoaded", actualizarOpcionesAsistencia);
+
+const URL_CONFIRMACIONES = "https://script.google.com/macros/s/AKfycbztqr7ahDJ8frWBFWRQXGHRR5H5rgGB__gv2Ow13dsEKvljyHTiA0Ruu098ihR4vDJZ/exec";
+const URL_CONSULTA_INVITADOS = URL_CONFIRMACIONES;
+function consultarInvitado() {
+    if (!tokenInvitado) return;
+
+    const script = document.createElement("script");
+
+    const url = new URL(URL_CONSULTA_INVITADOS);
+    url.searchParams.set("pagina", "invitado");
+    url.searchParams.set("token", tokenInvitado);
+    url.searchParams.set("callback", "recibirInvitado");
+
+    script.src = url.toString();
+
+    script.onerror = function () {
+        console.error("No se pudo conectar con Google Sheets.");
+    };
+
+    document.body.appendChild(script);
+}
+document.addEventListener("DOMContentLoaded", consultarInvitado);
+
+const fechaBoda = new Date("2026-12-26T17:00:00-06:00").getTime();  
+
+function actualizarContador() {
+    const ahora = new Date().getTime();
+    const diferencia = fechaBoda - ahora;
+
+    if (diferencia <= 0) {
+        document.getElementById("dias").textContent = "00";
+        document.getElementById("horas").textContent = "00";
+        document.getElementById("minutos").textContent = "00";
+        document.getElementById("segundos").textContent = "00";
+        return;
+    }
+
+    const dias = Math.floor(diferencia / 86400000);
+    const horas = Math.floor((diferencia % 86400000) / 3600000);
+    const minutos = Math.floor((diferencia % 3600000) / 60000);
+    const segundos = Math.floor((diferencia % 60000) / 1000);
+
+    document.getElementById("dias").textContent = String(dias).padStart(2, "0");
+    document.getElementById("horas").textContent = String(horas).padStart(2, "0");
+    document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+    document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+
+// Animación de la frase romántica
+const fraseAnimada = document.getElementById("frase-animada");
+const textoOriginal = fraseAnimada.textContent.trim();
+fraseAnimada.textContent = "";
+
+let animacionIniciada = false;
+let temporizadorEscritura;
+
+function escribirFrase() {
+    if (animacionIniciada) return;
+
+    animacionIniciada = true;
+    fraseAnimada.textContent = "";
+
+    let posicion = 0;
+    const letras = Array.from(textoOriginal);
+
+    function escribirLetra() {
+        if (posicion < letras.length) {
+            fraseAnimada.textContent += letras[posicion];
+            posicion++;
+            temporizadorEscritura = setTimeout(escribirLetra, 65);
+        }
+    }
+
+    escribirLetra();
+}
+
+const observadorFrase = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            escribirFrase();
+        } else {
+            clearTimeout(temporizadorEscritura);
+            animacionIniciada = false;
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+
+/* Animación de escritura: Prepárate... */
+
+const mensajePreparate = document.getElementById("mensaje-preparate");
+const textoPreparate = "Prepárate...";
+
+let temporizadorPreparate;
+let animacionPreparateIniciada = false;
+
+function escribirPreparate() {
+    if (animacionPreparateIniciada) return;
+
+    animacionPreparateIniciada = true;
+    mensajePreparate.textContent = "";
+
+    let posicion = 0;
+    const letras = Array.from(textoPreparate);
+
+    function escribirLetraPreparate() {
+        if (posicion < letras.length) {
+            mensajePreparate.textContent += letras[posicion];
+            posicion++;
+
+            temporizadorPreparate = setTimeout(
+                escribirLetraPreparate,
+                120
+            );
+        }
+    }
+
+    escribirLetraPreparate();
+}
+
+
+/* Activar la animación al llegar al contador */
+
+const observadorPreparate = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            escribirPreparate();
+        } else {
+            clearTimeout(temporizadorPreparate);
+            animacionPreparateIniciada = false;
+            mensajePreparate.textContent = "";
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+if (mensajePreparate) {
+    mensajePreparate.textContent = "";
+    observadorPreparate.observe(mensajePreparate);
+}
+
+
+/* ANIMACIÓN GENERAL DE APARICIÓN SUAVE */
+
+const elementosSuaves = document.querySelectorAll(".animar-suave");
+
+const observadorSuave = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        
+if (entrada.isIntersecting) {
+    entrada.target.classList.remove("animacion-activa");
+
+    // Reiniciar la animación desde el principio
+    void entrada.target.offsetWidth;
+
+    entrada.target.classList.add("animacion-activa");
+} else {
+    entrada.target.classList.remove("animacion-activa");
+}
+    });
+}, {
+    threshold: 0.7
+});
+
+elementosSuaves.forEach((elemento) => {
+    elemento.classList.add("animacion-preparada");
+    observadorSuave.observe(elemento);
+});
+
+observadorFrase.observe(document.querySelector(".introduccion-romantica"));
+
+// Animación de la fotografía al deslizar
+const marcoFotografia = document.querySelector(".marco-fotografia");
+
+if (marcoFotografia) {
+    const observadorFotografia = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.remove("animada");
+
+                // Reinicia la animación
+                void entrada.target.offsetWidth;
+
+                entrada.target.classList.add("animada");
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    observadorFotografia.observe(marcoFotografia);
+}
+
+
+/* Animación de la sección de bienvenida */
+
+const seccionBienvenida = document.querySelector("#bienvenida");
+
+if (seccionBienvenida) {
+    seccionBienvenida.classList.add("animacion-preparada");
+
+    const observadorBienvenida = new IntersectionObserver(
+        (entradas) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    seccionBienvenida.classList.add("animacion-activa");
+                } else {
+                    seccionBienvenida.classList.remove("animacion-activa");
+                }
+            });
+        },
+        {
+            threshold: 0.25
+        }
+    );
+
+    observadorBienvenida.observe(seccionBienvenida);
+}
+
+
+/* ANIMACIÓN DE LA SECCIÓN DE PADRES */
+
+const seccionPadres = document.querySelector(".seccion-padres");
+
+if (seccionPadres) {
+    seccionPadres.classList.add("animacion-preparada");
+
+    const observadorPadres = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                seccionPadres.classList.add("animacion-activa");
+            } else {
+                seccionPadres.classList.remove("animacion-activa");
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    observadorPadres.observe(seccionPadres);
+}
+
+
+/* Animación de la sección de padrinos */
+
+const seccionPadrinos = document.querySelector("#padrinos");
+
+if (seccionPadrinos) {
+    seccionPadrinos.classList.add("animacion-preparada");
+
+    const observadorPadrinos = new IntersectionObserver(
+        (entradas) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    seccionPadrinos.classList.add("animacion-activa");
+                } else {
+                    seccionPadrinos.classList.remove("animacion-activa");
+                }
+            });
+        },
+        {
+            threshold: 0.25
+        }
+    );
+
+    observadorPadrinos.observe(seccionPadrinos);
+}
+
+
+/* Animación al deslizar: ceremonia y recepción */
+const eventosAnimados = document.querySelectorAll('.animar-evento');
+
+const observadorEventos = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+        } else {
+            entrada.target.classList.remove('visible');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+eventosAnimados.forEach((evento) => {
+    observadorEventos.observe(evento);
+});
+
+
+/* Abrir invitación desde la bienvenida */
+const botonAbrir = document.getElementById('abrir-invitacion');
+const pantallaBienvenida = document.getElementById('pantalla-bienvenida');
+
+
+botonAbrir.addEventListener('click', () => {
+    const musicaBoda = document.getElementById('musica-boda');
+
+    // Comenzar la música al abrir el sobre
+    musicaBoda.volume = 0.5;
+    musicaBoda.currentTime = 10;
+    musicaBoda.play().catch((error) => {
+        console.error('No se pudo reproducir la música:', error);
+    });
+
+    // Abrir la solapa del sobre
+    pantallaBienvenida.classList.add('sobre-abierto');
+    
+    const selloSobre = document.querySelector('.sello-sobre');
+    selloSobre.style.opacity = '0';
+
+    // Preparar la invitación desde el inicio
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    });
+
+    // Mostrar la invitación después de abrir el sobre
+    setTimeout(() => {
+        pantallaBienvenida.style.opacity = '0';
+        pantallaBienvenida.style.visibility = 'hidden';
+    }, 2500);
+});
+
+
+/* Repetir la música desde el segundo 10 */
+document.getElementById('musica-boda').addEventListener('ended', function() {
+    this.currentTime = 10;
+    this.play();
+});
+
+
+/* Control del botón musical flotante */
+const botonMusica = document.getElementById('boton-musica');
+const iconoMusica = document.getElementById('icono-musica');
+const audioBoda = document.getElementById('musica-boda');
+
+botonMusica.addEventListener('click', () => {
+    if (audioBoda.paused) {
+        audioBoda.play();
+    } else {
+        audioBoda.pause();
+    }
+});
+
+audioBoda.addEventListener('play', () => {
+    iconoMusica.textContent = '⏸';
+    botonMusica.setAttribute('aria-label', 'Pausar música');
+});
+
+audioBoda.addEventListener('pause', () => {
+    iconoMusica.textContent = '▶';
+    botonMusica.setAttribute('aria-label', 'Reanudar música');
+});
+
+
+</script>
+
+<!-- Confirmación de asistencia -->
+<section class="confirmacion-asistencia" id="confirmacion">
+
+    <div class="contenido-confirmacion">
+
+        <h2>Confirmación de asistencia</h2>
+
+        <p class="mensaje-confirmacion">
+            Nos llenará de alegría compartir este día tan especial
+            con ustedes. Les agradeceremos confirmar su asistencia.
+        </p>
+
+        <h3 id="nombre-confirmacion">
+            Nombre del invitado
+        </h3>
+
+        <p id="pases-confirmacion">
+            Pases asignados
+        </p>
+
+        <label for="cantidad-asistentes">
+            ¿Cuántas personas asistirán?
+        </label>
+
+        <select id="cantidad-asistentes">
+            <option value="">Selecciona una opción</option>
+        </select>
+
+        <button type="button" id="boton-confirmar">
+            Confirmar asistencia
+        </button>
+
+<p id="mensaje-agradecimiento" style="display: none;">
+    ¡Muchas gracias por tu respuesta!
+    Nos llena de alegría compartir este momento tan especial contigo.
+    Con cariño, Kimberly & Andrés.
+</p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+let idEnvioPendiente = null;
+let consultaVerificacionActiva = null;
+let intentosVerificacion = 0;
+const MAX_INTENTOS_VERIFICACION = 5;
+const TIEMPO_ESPERA_VERIFICACION = 8000;
+
+function recibirVerificacionConfirmacion(datos) {
+  console.log("Resultado de verificación:", datos);
+
+  if (
+    datos.ok === true &&
+    datos.registrada === true &&
+    datos.idEnvio === idEnvioPendiente
+  ) {
+    document.getElementById("mensaje-agradecimiento").style.display = "block";
+    idEnvioPendiente = null;
+
+    const botonConfirmar = document.getElementById("boton-confirmar");
+botonConfirmar.disabled = false;
+botonConfirmar.textContent = "Confirmar asistencia";
+
+  } else if(
+    idEnvioPendiente &&
+    intentosVerificacion < MAX_INTENTOS_VERIFICACION
+) {
+    setTimeout(consultarConfirmacionGuardada,2000);
+   
+} else if (idEnvioPendiente) {
+  alert(
+    "No pudimos comprobar si tu confirmación se guardó. " +
+    "Por favor, intenta nuevamente en unos momentos."
+  );
+
+  idEnvioPendiente = null;
+
+  const botonConfirmar = document.getElementById("boton-confirmar");
+botonConfirmar.disabled = false;
+botonConfirmar.textContent = "Confirmar asistencia";
+    }
+}
+
+
+function consultarConfirmacionGuardada() {
+  if (!idEnvioPendiente || intentosVerificacion >= MAX_INTENTOS_VERIFICACION) {
+    return;
+  }
+
+  intentosVerificacion++;
+
+  const idConsulta = idEnvioPendiente;
+  const script = document.createElement("script");
+  const url = new URL(URL_CONFIRMACIONES);
+  const nombreCallback = "verificacion_" + crypto.randomUUID().replace(/-/g, "");
+
+  let consultaFinalizada = false;
+  let respuestaRecibida = false;
+  let temporizadorVerificacion = null;
+
+  consultaVerificacionActiva = script;
+
+  function limpiarConsulta() {
+    clearTimeout(temporizadorVerificacion);
+    delete window[nombreCallback];
+    script.remove();
+
+    if (consultaVerificacionActiva === script) {
+      consultaVerificacionActiva = null;
+    }
+  }
+
+  function manejarError() {
+    if (consultaFinalizada) return;
+
+    consultaFinalizada = true;
+    limpiarConsulta();
+
+    if (idEnvioPendiente !== idConsulta) return;
+
+    if (intentosVerificacion < MAX_INTENTOS_VERIFICACION) {
+      setTimeout(() => {
+        if (idEnvioPendiente === idConsulta) {
+          consultarConfirmacionGuardada();
+        }
+      }, 2000);
+    } else {
+      alert(
+        "No pudimos comprobar si tu confirmación se guardó. " +
+        "Por favor, intenta nuevamente en unos momentos."
+      );
+
+      idEnvioPendiente = null;
+
+      const boton = document.getElementById("boton-confirmar");
+      boton.disabled = false;
+      boton.textContent = "Confirmar asistencia";
+    }
+  }
+
+  window[nombreCallback] = function(datos) {
+    if (
+      consultaFinalizada ||
+      consultaVerificacionActiva !== script ||
+      idEnvioPendiente !== idConsulta
+    ) {
+      return;
+    }
+
+    respuestaRecibida = true;
+    consultaFinalizada = true;
+    limpiarConsulta();
+
+    recibirVerificacionConfirmacion(datos);
+  };
+
+  script.onerror = manejarError;
+
+  script.onload = () => {
+    if (!respuestaRecibida) {
+      manejarError();
+    }
+  };
+
+  temporizadorVerificacion = setTimeout(() => {
+    manejarError();
+  }, TIEMPO_ESPERA_VERIFICACION);
+
+  url.searchParams.set("pagina", "verificar");
+  url.searchParams.set("token", tokenInvitado);
+  url.searchParams.set("callback", nombreCallback);
+
+  script.src = url.toString();
+  document.body.appendChild(script);
+}
+
+document.getElementById("boton-confirmar").addEventListener("click", function () {
+    const selector = document.getElementById("cantidad-asistentes");
+    const cantidad = selector.value;
+
+    if (cantidad === "") {
+        alert("Por favor, selecciona cuántas personas asistirán.");
+        return;
+    }
+if (!invitadoActual || !tokenInvitado) {
+    alert("No pudimos verificar tu invitación. Por favor, abre tu enlace personalizado.");
+    return;
+}
+
+const idEnvio = crypto.randomUUID();
+idEnvioPendiente = idEnvio;
+intentosVerificacion = 0;
+
+const datosConfirmacion = {
+  codigo: invitadoActual.codigo,
+  token: tokenInvitado,
+  nombre: invitadoActual.nombre,
+  pasesAsignados: invitadoActual.pases,
+  pasesConfirmados: Number(cantidad),
+  idEnvio: idEnvio
+};
+
+console.log("Datos de confirmación:", datosConfirmacion);
+
+
+const botonConfirmar = document.getElementById("boton-confirmar");
+
+botonConfirmar.disabled = true;
+botonConfirmar.textContent = "Enviando confirmación...";
+
+
+const controladorEnvio = new AbortController();
+
+const temporizadorEnvio = setTimeout(() => {
+  controladorEnvio.abort();
+}, 15000);
+fetch(URL_CONFIRMACIONES, {
+    method: "POST",
+    mode: "no-cors",
+    signal: controladorEnvio.signal,
+    headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(datosConfirmacion)
+})
+.then(() => {
+  consultarConfirmacionGuardada();
+})
+.catch(error => {
+  console.error("Error al enviar:", error);
+
+  idEnvioPendiente = null;
+
+  const botonConfirmar = document.getElementById("boton-confirmar");
+  botonConfirmar.disabled = false;
+  botonConfirmar.textContent = "Confirmar asistencia";
+
+  alert(
+    "Ocurrió un problema de conexión. No pudimos comprobar el envío. " +
+    "Por favor, intenta nuevamente en unos momentos."
+  );
+})
+
+.finally(() => {
+  clearTimeout(temporizadorEnvio);
+  console.log("Finalizó la solicitud inicial de confirmación.");
+});
+
+
+});
+</script>
+
+</body>
+</html>
