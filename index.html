@@ -3316,6 +3316,12 @@ function actualizarOpcionesAsistencia() {
 
     if (!invitadoActual || !selector) return;
     selector.innerHTML = "";
+    const opcionInicial = document.createElement("option");
+opcionInicial.value = "";
+opcionInicial.textContent = "Selecciona una opción";
+opcionInicial.disabled = true;
+opcionInicial.selected = true;
+selector.appendChild(opcionInicial);
 
     // Opción para quienes no podrán asistir
     const noAsistire = document.createElement("option");
