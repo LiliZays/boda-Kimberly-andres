@@ -2528,6 +2528,35 @@
         height: 90px;
     }
 }
+.boton-pase-digital {
+    display: block;
+    margin: 24px auto 10px;
+    padding: 15px 30px;
+    background: #283F60;
+    color: #ffffff;
+    border: 1px solid #aab8ca;
+    border-radius: 35px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(40, 63, 96, 0.15);
+    transition: all 0.3s ease;
+}
+
+.boton-pase-digital:hover {
+    background: #1c304d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 63, 96, 0.25);
+}
+
+@media (max-width: 480px) {
+    .boton-pase-digital {
+        max-width: 90%;
+        padding: 14px 22px;
+        font-size: 15px;
+    }
+}
 
 </style>
 
@@ -3588,7 +3617,7 @@ botonAbrir.addEventListener('click', () => {
         alert("Estamos preparando su invitación. Espere unos segundos e inténtelo nuevamente.");
         return;
     }
-    
+
     // Iniciar la melodía al abrir el sobre
     const audioBienvenida = document.getElementById("musica-boda");
 
@@ -3652,7 +3681,7 @@ botonAbrir.addEventListener('click', () => {
             Confirmar asistencia
         </button>
 
-<p id="mensaje-agradecimiento" style="display: none;">
+<p id="mensaje-agradecimiento" style="display: none">
     ¡Muchas gracias por tu respuesta!
     Nos llena de alegría compartir este momento tan especial contigo.
     Con cariño, Kimberly & Andrés.
@@ -3662,9 +3691,10 @@ botonAbrir.addEventListener('click', () => {
 <button
     type="button"
     id="boton-ver-pase"
+    class="boton-pase-digital"
     style="display: none;"
 >
-    Ver mi pase de acceso
+    ♡ Ver mi pase de acceso
 </button>
     </div>
 
