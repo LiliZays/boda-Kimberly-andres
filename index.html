@@ -3252,10 +3252,12 @@ function recibirInvitado(datos) {
     }
 
     invitadoActual = {
-        codigo: datos.codigo,
-        nombre: datos.nombre,
-        pases: datos.pases
-    };
+    codigo: datos.codigo,
+    nombre: datos.nombre,
+    pases: datos.pases,
+    adultos: datos.adultos,
+    ninos: datos.ninos
+};
 
     mostrarDatosInvitado();
     mostrarDatosConfirmacion();
@@ -3282,10 +3284,28 @@ function mostrarDatosConfirmacion() {
     document.getElementById("nombre-confirmacion").textContent =
         invitadoActual.nombre;
 
-    document.getElementById("pases-confirmacion").textContent =
-        invitadoActual.pases === 1
-            ? "1 pase asignado"
-            : `${invitadoActual.pases} pases asignados`;
+    const totalPases = Number(invitadoActual.pases) || 0;
+const adultos = Number(invitadoActual.adultos) || 0;
+const ninos = Number(invitadoActual.ninos) || 0;
+
+const textoTotal = totalPases === 1
+    ? "1 pase asignado"
+    : `${totalPases} pases asignados`;
+
+const desglose = [];
+
+if (adultos > 0) {
+    desglose.push(`${adultos} ${adultos === 1 ? "adulto" : "adultos"}`);
+}
+
+if (ninos > 0) {
+    desglose.push(`${ninos} ${ninos === 1 ? "niño" : "niños"}`);
+}
+
+document.getElementById("pases-confirmacion").textContent =
+    desglose.length > 0
+        ? `${textoTotal} · ${desglose.join(" y ")}`
+        : textoTotal;
 }
 
 document.addEventListener("DOMContentLoaded", mostrarDatosConfirmacion);
