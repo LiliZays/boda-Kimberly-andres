@@ -1156,7 +1156,7 @@
 
 .seccion-padres {
     background: #F8F8FA;
-    padding: 65px 25px;
+    padding: 65px 8px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -1608,42 +1608,6 @@
 }
 
 
-/* Botón musical flotante */
-#boton-musica {
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #263B59;
-    color: #FFFFFF;
-    border: 2px solid #A9B6C7;
-    border-radius: 50%;
-
-    box-shadow: 0 4px 15px rgba(38, 59, 89, 0.25);
-    cursor: pointer;
-    z-index: 1000;
-
-    transition: transform 0.3s ease,
-                background 0.3s ease;
-}
-
-#boton-musica:hover {
-    transform: scale(1.08);
-    background: #344B6B;
-}
-
-#icono-musica {
-    font-size: 25px;
-    line-height: 1;
-}
-
-
 /* Solapa triangular del sobre */
 .pantalla-bienvenida {
     perspective: 1200px;
@@ -1821,6 +1785,7 @@
 .cuerpo-sobre #abrir-invitacion {
     padding: 8px 22px;
     font-size: 19px;
+    transform: translateY(-30px);
 }
 
 .cuerpo-sobre .mensaje-musica {
@@ -1905,7 +1870,7 @@
 /* Separación entre el sello y el botón */
 .cuerpo-sobre #abrir-invitacion {
     margin-top: 8px;
-    transform: translateY(-12px);
+    transform: translateY(-30px);
     background: #263B59;
     color: #F2F0E8;
     border: 1px solid #A9B6C7;
@@ -2092,21 +2057,474 @@
     box-shadow: 0 5px 18px rgba(38, 59, 89, 0.08);
 }
 
+
+/* SECCIÓN MUSICAL */
+.seccion-musical {
+    padding: 65px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #edf0f5 100%);
+    text-align: center;
+}
+
+.contenido-musical {
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.contenido-musical h2 {
+    font-family: 'Georgia', serif;
+    font-size: clamp(28px, 5vw, 40px);
+    color: #253954;
+    margin-bottom: 20px;
+}
+
+.contenido-musical > p {
+    color: #596579;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.video-musical {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 2px solid #c5cbd5;
+    box-shadow: 0 10px 30px rgba(30, 45, 70, 0.15);
+}
+
+.video-musical iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contenido-musical .titulo-cancion {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #253954;
+    letter-spacing: 1px;
+}
+
+
+/* FRANJA MUSICAL DESPLEGABLE */
+.seccion-musical {
+    padding: 18px 20px;
+    background: #f5f6f8;
+}
+
+
+.franja-musical {
+    max-width: 650px;
+    margin: 0 auto;
+    border: 1px solid #8191aa;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #172840, #304765);
+    overflow: hidden;
+    box-shadow: 0 5px 16px rgba(23, 40, 64, 0.18);
+}
+
+.encabezado-musical {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.encabezado-musical::-webkit-details-marker {
+    display: none;
+}
+
+
+.icono-franja {
+    color: #D8DFEA;
+    font-size: 25px;
+    text-shadow: 0 1px 5px rgba(216, 223, 234, 0.25);
+}
+
+.informacion-musical {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    gap: 3px;
+}
+
+.informacion-musical strong {
+    color: #D8DFEA;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+.informacion-musical small {
+    color: #BFC9D8;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.4px;
+}
+
+
+.flecha-musical {
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid #D8DFEA;
+    border-bottom: 2px solid #D8DFEA;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.franja-musical[open] .flecha-musical {
+    transform: rotate(180deg);
+}
+
+.contenido-desplegable {
+    padding: 5px 18px 18px;
+}
+
+.contenido-desplegable .video-musical {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+
+/* Botón flotante de música */
+#boton-musica {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #172840, #304765);
+    border: 2px solid #C0C8D4;
+    color: #E4E9F0;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#boton-musica:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+#boton-musica:focus-visible {
+    outline: 3px solid #8191AA;
+    outline-offset: 3px;
+}
+
+
+/* Ecualizador animado del botón musical */
+#icono-musica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barras-musicales {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 25px;
+}
+
+.barras-musicales span {
+    width: 4px;
+    height: 8px;
+    background: #D8DFEA;
+    border-radius: 4px;
+    animation: ecualizador 0.8s ease-in-out infinite alternate;
+}
+
+.barras-musicales span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.barras-musicales span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.barras-musicales span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.barras-musicales span:nth-child(4) {
+    animation-delay: 0.1s;
+}
+
+.barras-musicales span:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ecualizador {
+    0% {
+        height: 5px;
+    }
+    100% {
+        height: 23px;
+    }
+}
+
+/* Estados del reproductor */
+#boton-musica.reproduciendo .barras-musicales {
+    display: flex;
+}
+
+#boton-musica.reproduciendo .simbolo-play {
+    display: none;
+}
+
+.simbolo-play {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    margin-left: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .barras-musicales span {
+        animation: none;
+        height: 13px;
+    }
+}
+
+
+/* Distribución de los nombres de los padres */
+.padres-columnas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.columna-padres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    min-width: 0;
+}
+
+.columna-padres p {
+    margin: 0;
+    color: #536A89;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(14px, 2.3vw, 27px);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.35;
+}
+
+.union-padres {
+    color: #A8B8CC;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 38px;
+    font-style: italic;
+    align-self: center;
+}
+
+/* Ajustes para celulares */
+
+/* Ajuste de nombres de los padres en celulares */
+@media (max-width: 600px) {
+    .padres-columnas {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr) 12px minmax(0, 1fr);
+        gap: 0;
+        margin-top: 28px;
+    }
+
+    .columna-padres {
+        gap: 22px;
+    }
+
+    .columna-padres p {
+        font-size: clamp(16px, 3.8vw, 17px);
+        letter-spacing: -0.35px;
+        white-space: nowrap;
+    }
+
+    .union-padres {
+        font-size: 20px;
+    }
+}
+
+
+/* ===== MESAS DE REGALOS ===== */
+
+.seccion-regalos {
+  background: #F8F8FA;
+  padding: 75px 18px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.seccion-regalos h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(34px, 6vw, 48px);
+  color: #263B59;
+  font-weight: 600;
+  margin: 0 0 25px;
+}
+
+.mensaje-regalos {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-style: normal;
+  line-height: 1.55;
+  color: #536A89;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  letter-spacing: 0;
+  font-weight: 500;
+  background: linear-gradient(135deg, #E3E8F0, #D6DEE9);
+  border: 1px solid #C5D0DF;
+  border-radius: 16px;
+  padding: 24px 18px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 18px rgba(38, 59, 89, 0.07);
+}
+
+.contenedor-mesas {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tarjeta-regalo {
+  background: #FFFFFF;
+  border: 1px solid #D7DFEA;
+  border-radius: 16px;
+  padding: 28px 12px;
+  box-shadow: 0 6px 20px rgba(38, 59, 89, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-width: 0;
+}
+
+.tarjeta-regalo h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(21px, 3vw, 30px);
+  color: #536A89;
+  margin: 0;
+  font-weight: 600;
+}
+
+.tarjeta-regalo a {
+  display: inline-block;
+  background: #263B59;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  padding: 12px 16px;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tarjeta-regalo a:hover {
+  background: #536A89;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .seccion-regalos {
+    padding: 55px 12px;
+  }
+
+  .contenedor-mesas {
+    gap: 10px;
+  }
+
+  .tarjeta-regalo {
+    padding: 22px 7px;
+    gap: 18px;
+  }
+
+  .tarjeta-regalo a {
+    font-size: 15px;
+    padding: 14px 22px;
+    min-width: 170px;
+    box-sizing: border-box;
+}
+}
+
+
+/* ===== ADORNO DE MESA DE REGALOS ===== */
+
+.adorno-regalos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 12px auto 25px;
+}
+
+.linea-regalos {
+  width: 65px;
+  height: 1px;
+  background: #A8B8CC;
+}
+
+.icono-regalos {
+  font-size: 23px;
+  line-height: 1;
+}
+
+
+/* ===== LOGOTIPOS DE MESAS DE REGALOS ===== */
+
+.logo-mesa-regalos {
+  display: block;
+  width: 85%;
+  max-width: 230px;
+  height: 65px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .logo-mesa-regalos {
+        width: 100%;
+        max-width: 230px;
+        height: 90px;
+    }
+}
+
 </style>
 
 </head>
 <body>
-
-<!-- Botón flotante de música -->
-<button id="boton-musica" type="button"
-        aria-label="Reproducir música">
-    <span id="icono-musica">♫</span>
-</button>
-
-<!-- Música de la invitación -->
-<audio id="musica-boda" preload="auto">
-    <source src="musica/starlight.mp3" type="audio/mpeg">
-</audio>
 
 
 <!-- Pantalla de bienvenida -->
@@ -2309,23 +2727,22 @@
         de esta nueva etapa.
     </p>
 
-    <div class="grupo-padres animar-padres">
-        <h3>Padres de la novia</h3>
+    
+<!-- Nombres de nuestros padres -->
 
-        <div class="nombres-padres">
-            <p>Iliana Zayas<br>Flores</p>
-            <p>Miguel Ángel<br>Romero Mota</p>
-        </div>
+<div class="padres-columnas animar-padres">
+    <div class="columna-padres">
+        <p>Iliana Zayas Flores</p>
+        <p>Miguel Ángel Romero Mota</p>
     </div>
 
-    <div class="grupo-padres animar-padres">
-        <h3>Padres del novio</h3>
+    <span class="union-padres">&amp;</span>
 
-        <div class="nombres-padres">
-            <p>Verónica Durán<br>Arroyo</p>
-            <p>Raúl Hernández<br>Ayala</p>
-        </div>
+    <div class="columna-padres">
+        <p>Verónica Durán Arroyo</p>
+        <p>Raúl Hernández Ayala</p>
     </div>
+</div>
 
 </section>
 
@@ -2570,7 +2987,7 @@ Ver ubicación
     
     <p class="direccion">San Pedro Cholula, Puebla</p>
 
-    <p class="hora-recepcion">20:30 hrs</p>
+    <p class="hora-recepcion">20:00 hrs</p>
 
     
 <a
@@ -2735,6 +3152,49 @@ Ver ubicación
     exclusivamente para nuestras damas
     y caballeros de honor.
 </p>
+
+</section>
+
+
+<!-- MESAS DE REGALOS -->
+<section class="seccion-regalos animar-evento" id="regalos">
+
+  <h2>Mesa de regalos</h2>
+
+<div class="adorno-regalos">
+  <span class="linea-regalos"></span>
+  <span class="icono-regalos">🎁</span>
+  <span class="linea-regalos"></span>
+</div>
+
+
+  <p class="mensaje-regalos">
+    Estamos por comenzar a construir un hogar lleno de amor.
+    Lo más valioso para nosotros es compartir este momento
+    rodeados de quienes amamos, y si desean acompañarnos
+    con un detalle especial en esta nueva etapa,
+    hemos preparado nuestras mesas de regalos con mucho cariño.
+  </p>
+
+  <div class="contenedor-mesas">
+
+<div class="tarjeta-regalo">
+  <img
+    src="./Imagenes/logo-amazon.png"
+    alt="Amazon"
+    class="logo-mesa-regalos"
+  >
+
+  <a
+    href="https://www.amazon.com.mx/wedding/guest-view/1YUP28UJFT9D4"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ver mesa de regalos
+  </a>
+</div>
+
+  </div>
 
 </section>
 
@@ -3118,15 +3578,14 @@ const pantallaBienvenida = document.getElementById('pantalla-bienvenida');
 
 
 botonAbrir.addEventListener('click', () => {
-    const musicaBoda = document.getElementById('musica-boda');
 
-    // Comenzar la música al abrir el sobre
-    musicaBoda.volume = 0.5;
-    musicaBoda.currentTime = 10;
-    musicaBoda.play().catch((error) => {
-        console.error('No se pudo reproducir la música:', error);
+    // Iniciar la melodía al abrir el sobre
+    const audioBienvenida = document.getElementById("musica-boda");
+
+    audioBienvenida.play().catch(error => {
+        console.log("El navegador no permitió iniciar la música:", error);
     });
-
+    
     // Abrir la solapa del sobre
     pantallaBienvenida.classList.add('sobre-abierto');
     
@@ -3147,39 +3606,10 @@ botonAbrir.addEventListener('click', () => {
 });
 
 
-/* Repetir la música desde el segundo 10 */
-document.getElementById('musica-boda').addEventListener('ended', function() {
-    this.currentTime = 10;
-    this.play();
-});
-
-
-/* Control del botón musical flotante */
-const botonMusica = document.getElementById('boton-musica');
-const iconoMusica = document.getElementById('icono-musica');
-const audioBoda = document.getElementById('musica-boda');
-
-botonMusica.addEventListener('click', () => {
-    if (audioBoda.paused) {
-        audioBoda.play();
-    } else {
-        audioBoda.pause();
-    }
-});
-
-audioBoda.addEventListener('play', () => {
-    iconoMusica.textContent = '⏸';
-    botonMusica.setAttribute('aria-label', 'Pausar música');
-});
-
-audioBoda.addEventListener('pause', () => {
-    iconoMusica.textContent = '▶';
-    botonMusica.setAttribute('aria-label', 'Reanudar música');
-});
-
-
 </script>
 
+<!-- Sección musical: Starlight de Muse -->
+ 
 <!-- Confirmación de asistencia -->
 <section class="confirmacion-asistencia" id="confirmacion">
 
@@ -3218,6 +3648,14 @@ audioBoda.addEventListener('pause', () => {
     Con cariño, Kimberly & Andrés.
 </p>
 
+<!-- Botón para consultar el pase digital -->
+<button
+    type="button"
+    id="boton-ver-pase"
+    style="display: none;"
+>
+    Ver mi pase de acceso
+</button>
     </div>
 
 </section>
@@ -3226,6 +3664,20 @@ audioBoda.addEventListener('pause', () => {
 <script>
 
 let idEnvioPendiente = null;
+const botonVerPase = document.getElementById("boton-ver-pase");
+
+botonVerPase.addEventListener("click", function () {
+    if (!tokenInvitado) {
+        alert("No se encontró el pase de esta invitación.");
+        return;
+    }
+
+    const urlPase = new URL(URL_CONFIRMACIONES);
+    urlPase.searchParams.set("pagina", "pase");
+    urlPase.searchParams.set("token", tokenInvitado);
+
+    window.open(urlPase.toString(), "_blank", "noopener,noreferrer");
+});
 let consultaVerificacionActiva = null;
 let intentosVerificacion = 0;
 const MAX_INTENTOS_VERIFICACION = 5;
@@ -3240,6 +3692,7 @@ function recibirVerificacionConfirmacion(datos) {
     datos.idEnvio === idEnvioPendiente
   ) {
     document.getElementById("mensaje-agradecimiento").style.display = "block";
+    document.getElementById("boton-ver-pase").style.display = "block";
     idEnvioPendiente = null;
 
     const botonConfirmar = document.getElementById("boton-confirmar");
@@ -3434,6 +3887,71 @@ fetch(URL_CONFIRMACIONES, {
 
 });
 </script>
+
+
+<!-- Botón flotante para controlar la música -->
+<button
+    id="boton-musica"
+    type="button"
+    aria-label="Reproducir o pausar música"
+    aria-pressed="false">
+    
+<span id="icono-musica">
+    <span class="barras-musicales">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    <span class="simbolo-play">▶</span>
+</span>
+
+</button>
+
+
+<audio id="musica-boda" loop preload="auto">
+    <source src="musica/Weddin - AtlasAudio.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const musicaBoda = document.getElementById("musica-boda");
+    const botonMusica = document.getElementById("boton-musica");
+    const iconoMusica = document.getElementById("icono-musica");
+
+function actualizarBotonMusica() {
+    const reproduciendo = !musicaBoda.paused;
+
+    botonMusica.classList.toggle("reproduciendo", reproduciendo);
+
+    botonMusica.setAttribute("aria-pressed", String(reproduciendo));
+
+    botonMusica.setAttribute(
+        "aria-label",
+        reproduciendo ? "Pausar música" : "Reproducir música"
+    );
+}
+
+    botonMusica.addEventListener("click", async function () {
+        if (musicaBoda.paused) {
+            try {
+                await musicaBoda.play();
+            } catch (error) {
+                console.log("No se pudo iniciar la música:", error);
+            }
+        } else {
+            musicaBoda.pause();
+        }
+
+        actualizarBotonMusica();
+    });
+
+    musicaBoda.addEventListener("play", actualizarBotonMusica);
+    musicaBoda.addEventListener("pause", actualizarBotonMusica);
+    actualizarBotonMusica();
+</script>
+
+
 
 </body>
 </html>
