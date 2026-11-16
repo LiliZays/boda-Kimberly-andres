@@ -2574,11 +2574,9 @@
 
 <div class="datos-invitado">
     <p class="nombre-invitado" id="nombre-invitado">
-        Familia Rodríguez Hernández
+        Preparando su invitación...
     </p>
-    <p class="pases-invitado" id="pases-invitado">
-        4 pases
-    </p>
+    <p class="pases-invitado" id="pases-invitado"></p>
 </div>
 
     </div>
@@ -3586,7 +3584,11 @@ const pantallaBienvenida = document.getElementById('pantalla-bienvenida');
 
 
 botonAbrir.addEventListener('click', () => {
-
+    if (tokenInvitado && !invitadoActual) {
+        alert("Estamos preparando su invitación. Espere unos segundos e inténtelo nuevamente.");
+        return;
+    }
+    
     // Iniciar la melodía al abrir el sobre
     const audioBienvenida = document.getElementById("musica-boda");
 
