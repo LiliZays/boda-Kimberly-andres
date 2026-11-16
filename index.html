@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda | Kimberly & Jesús Andrés</title>
+    <title>Nuestra Boda | Kimberly & Andrés</title>
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -810,15 +810,17 @@
 /* Padrinos: nombres adaptados a celular */
 
 .nombres-padrinos {
-    gap: 10px;
-    padding: 0 5px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .nombres-padrinos p {
-    font-size: clamp(15px, 4.2vw, 19px);
+    font-size: 10px;
     line-height: 1.5;
     letter-spacing: 0;
+    white-space: nowrap;
 }
     }
 
@@ -1066,7 +1068,7 @@
 
 .seccion-padrinos {
     background: #F8F8FA;
-    padding: 65px 25px 45px;
+    padding: 65px 8px 45px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -1126,7 +1128,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    gap: 15px;
+    gap: 4px;
     width: 100%;
     max-width: 650px;
     margin: 25px auto;
@@ -1135,12 +1137,13 @@
 
 .nombres-padrinos p {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(16px, 4vw, 25px);
+    font-size: 15px;
     font-style: italic;
     color: #526783;
     line-height: 1.5;
     margin: 0;
     min-width: 0;
+    white-space: nowrap;
 }
 
 .nombres-padrinos span {
