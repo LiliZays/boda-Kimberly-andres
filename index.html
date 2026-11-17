@@ -2634,17 +2634,18 @@
           font-weight="600"
           letter-spacing="4">
 
-        <textPath href="#arco-sabado"
-                  startOffset="50%"
-                  text-anchor="middle">
+        <textPath id="dia-portada"
+          href="#arco-sabado"
+          startOffset="50%"
+          text-anchor="middle">
             SÁBADO
-        </textPath>
+    </textPath>
 
     </text>
 </svg>
 
     <div class="fecha-completa">
-        <span class="fecha-mes">DICIEMBRE</span>
+        <span class="fecha-mes" id="mes-portada">DICIEMBRE</span>
         <span class="fecha-numero">26</span>
         <span class="fecha-anio">2026</span>
     </div>
@@ -2656,7 +2657,7 @@
     <span>Andrés</span>
 </h1>
 
-    <h2>Nuestra Boda</h2>
+    <h2 id="titulo-boda">Nuestra Boda</h2>
 
     <div class="separador-portada">
         <span>◆</span>
@@ -2678,7 +2679,7 @@
         </svg>
     </a>
 
-    <p>Desliza para descubrir</p>
+    <p id="texto-deslizar">Desliza para descubrir</p>
     </div>
 </div>
 
@@ -2699,9 +2700,10 @@
 
 </div>
 
+
 <section class="bienvenida" id="bienvenida">
 
-    <h2 class="animar-bienvenida">
+    <h2 class="animar-bienvenida" id="titulo-bienvenida">
         Con la bendición de Dios
     </h2>
 
@@ -2711,20 +2713,20 @@
              class="imagen-anillos">
     </div>
 
-    <p class="animar-bienvenida">
+    <p class="animar-bienvenida" id="texto-bienvenida">
         Hemos decidido comenzar una nueva etapa de nuestras vidas.
         Nos llena de alegría compartir este día tan especial
         con las personas que forman parte de nuestra historia.
     </p>
 
-    <p class="animar-bienvenida">
+    <p class="animar-bienvenida" id="mensaje-bienvenida">
         ¡Será un honor contar con tu presencia!
     </p>
 
 </section>
 
 <section class="nuestra-historia">
-    <h2>Nuestra historia</h2>
+    <h2 id="titulo-historia">Nuestra historia</h2>
 
     <div class="marco-fotografia">
         <img
@@ -2732,23 +2734,22 @@
             alt="Kimberly y Andrés celebrando su amor">
     </div>
 
-<p class="frase-historia">
-    «Hay historias que comienzan con un encuentro
-    y se convierten en un para siempre…»
-</p>
+    <p class="frase-historia" id="texto-historia">
+        «Hay historias que comienzan con un encuentro
+        y se convierten en un para siempre…»
+    </p>
 
 </section>
-
 
 <!-- SECCIÓN DE NUESTROS PADRES -->
 
 <section class="seccion-padres" id="padres">
 
-    <p class="subtitulo-padres animar-padres">
+    <p class="subtitulo-padres animar-padres" id="subtitulo-padres">
         CON EL AMOR Y LA BENDICIÓN DE NUESTROS PADRES
-    </p>
+</p>
 
-    <h2 class="animar-padres">Nuestros padres</h2>
+    <h2 class="animar-padres" id="titulo-padres">Nuestros padres</h2>
 
     <div class="adorno-padres animar-padres">
         <span></span>
@@ -2756,7 +2757,7 @@
         <span></span>
     </div>
 
-    <p class="frase-padres animar-padres">
+    <p class="frase-padres animar-padres" id="texto-padres">
         Con su amor, ejemplo y bendición,
         nos acompañan en el comienzo
         de esta nueva etapa.
@@ -2783,11 +2784,11 @@
 
 <section class="seccion-padrinos" id="padrinos">
 
-    <p class="subtitulo-padrinos animar-padrinos">
+    <p class="subtitulo-padrinos animar-padrinos" id="subtitulo-padrinos">
         UNIDOS POR EL AMOR Y LA FE
     </p>
 
-    <h2 class="animar-padrinos">Nuestros padrinos</h2>
+    <h2 class="animar-padrinos" id="titulo-padrinos">Nuestros padrinos</h2>
 
     
 <div class="adorno-padrinos animar-padrinos">
@@ -2824,13 +2825,13 @@
     </svg>
 </div>
 
-    <p class="mensaje-padrinos animar-padrinos">
+    <p class="mensaje-padrinos animar-padrinos" id="mensaje-padrinos">
         Con cariño y gratitud, agradecemos a quienes
         nos acompañarán como testigos de nuestra
         unión ante Dios.
     </p>
 
-    <h3 class="animar-padrinos">Padrinos de velación</h3>
+    <h3 class="animar-padrinos" id="tipo-padrinos">Padrinos de velación</h3>
 
     
     <div class="nombres-padrinos animar-padrinos">
@@ -2871,31 +2872,31 @@
 </div>
 
     
-<h2 class="animar-suave">
+<h2 class="animar-suave" id="titulo-contador">
     El tiempo sigue su curso, y nuestro para siempre comienza en...
 </h2>
 
     <div class="contador">
-        <div>
-            <span id="dias">00</span>
-            <p>Días</p>
-        </div>
-
-        <div>
-            <span id="horas">00</span>
-            <p>Horas</p>
-        </div>
-
-        <div>
-            <span id="minutos">00</span>
-            <p>Minutos</p>
-        </div>
-
-        <div>
-            <span id="segundos">00</span>
-            <p>Segundos</p>
-        </div>
+    <div>
+        <span id="dias">00</span>
+        <p id="etiqueta-dias">Días</p>
     </div>
+
+    <div>
+        <span id="horas">00</span>
+        <p id="etiqueta-horas">Horas</p>
+    </div>
+
+    <div>
+        <span id="minutos">00</span>
+        <p id="etiqueta-minutos">Minutos</p>
+    </div>
+
+    <div>
+        <span id="segundos">00</span>
+        <p id="etiqueta-segundos">Segundos</p>
+    </div>
+</div>
 
     <p class="mensaje-preparate" id="mensaje-preparate">
         Prepárate...
@@ -2941,17 +2942,18 @@
     </svg>
 </div>
 
-    <h2>Ceremonia Religiosa</h2>
-    <p>Ante Dios y acompañados de quienes amamos, consagraremos nuestra unión, confiando en que su bendición ilumine cada paso de nuestra vida juntos.</p>
+    <h2 id="titulo-ceremonia">Ceremonia Religiosa</h2>
+    <p id="texto-ceremonia">Ante Dios y acompañados de quienes amamos, consagraremos nuestra unión, confiando en que su bendición ilumine cada paso de nuestra vida juntos.</p>
     <h3>Templo María Madre de la Iglesia</h3>
     <p class="direccion">Huexotitla, Puebla</p>
-    <p class="hora-ceremonia">17:00 hrs</p>
+    <p class="hora-ceremonia" id="hora-ceremonia">17:00 hrs</p>
     
 <a
   href="https://www.google.com/maps/search/?api=1&query=Templo%20Maria%20Madre%20de%20la%20Iglesia%20Huexotitla%20Puebla"
   target="_blank"
   rel="noopener noreferrer"
-  class="boton-ubicacion">
+  class="boton-ubicacion"
+  id="boton-ubicacion-ceremonia">
   <svg width="19" height="19" viewBox="0 0 24 24"
      fill="none" stroke="currentColor"
      stroke-width="1.5" stroke-linecap="round"
@@ -2960,7 +2962,7 @@
     <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
     <circle cx="12" cy="10" r="2.5"/>
 </svg>
-Ver ubicación
+<span id="texto-ubicacion-ceremonia">Ver ubicación</span>
 </a>
 
 </section>
@@ -3010,9 +3012,9 @@ Ver ubicación
     </svg>
 </div>
 
-    <h2>Recepción</h2>
+    <h2 id="titulo-recepcion">Recepción</h2>
 
-    <p>
+    <p id="texto-recepcion">
         Después de unir nuestras vidas ante Dios, comienza la celebración.
         Los esperamos para compartir una velada llena de amor, sonrisas,
         música y momentos que quedarán grabados en nuestros corazones.
@@ -3022,14 +3024,15 @@ Ver ubicación
     
     <p class="direccion">San Pedro Cholula, Puebla</p>
 
-    <p class="hora-recepcion">20:00 hrs</p>
+    <p class="hora-recepcion" id="hora-recepcion">20:00 hrs</p>
 
     
 <a
   href="https://www.google.com/maps/search/?api=1&amp;query=Salon%20de%20Eventos%20San%20Francisco%20Cholula%20Puebla"
   target="_blank"
   rel="noopener noreferrer"
-  class="boton-ubicacion">
+  class="boton-ubicacion"
+  id="boton-ubicacion-recepcion">
 
   <svg width="19" height="19" viewBox="0 0 24 24"
        fill="none" stroke="currentColor"
@@ -3041,7 +3044,7 @@ Ver ubicación
     <circle cx="12" cy="10" r="2.5"/>
   </svg>
 
-  Ver ubicación
+ <span id="texto-ubicacion-recepcion">Ver ubicación</span>
 </a>
 
 </section>
@@ -3049,16 +3052,15 @@ Ver ubicación
 </div>
 
 
-
 <section class="codigo-vestimenta animar-evento" id="vestimenta">
 
-    <p class="subtitulo-vestimenta">
+    <p class="subtitulo-vestimenta" id="subtitulo-vestimenta">
         PARA ESTA OCASIÓN ESPECIAL
     </p>
 
-    <h2>Código de vestimenta</h2>
+    <h2 id="titulo-vestimenta">Código de vestimenta</h2>
 
-    <p class="tipo-vestimenta">Formal</p>
+    <p class="tipo-vestimenta" id="tipo-vestimenta">Formal</p>
 
 
 <div class="adorno-vestimenta">
@@ -3182,7 +3184,7 @@ Ver ubicación
 </div>
     
 
-<p class="nota-vestimenta">
+<p class="nota-vestimenta" id="nota-vestimenta">
     Agradecemos reservar el color azul marino
     exclusivamente para nuestras damas
     y caballeros de honor.
@@ -3194,7 +3196,7 @@ Ver ubicación
 <!-- MESAS DE REGALOS -->
 <section class="seccion-regalos animar-evento" id="regalos">
 
-  <h2>Mesa de regalos</h2>
+  <h2 id="titulo-regalos">Mesa de regalos</h2>
 
 <div class="adorno-regalos">
   <span class="linea-regalos"></span>
@@ -3203,7 +3205,7 @@ Ver ubicación
 </div>
 
 
-  <p class="mensaje-regalos">
+  <p class="mensaje-regalos" id="mensaje-regalos">
     Estamos por comenzar a construir un hogar lleno de amor.
     Lo más valioso para nosotros es compartir este momento
     rodeados de quienes amamos, y si desean acompañarnos
@@ -3224,6 +3226,7 @@ Ver ubicación
     href="https://www.amazon.com.mx/wedding/guest-view/1YUP28UJFT9D4"
     target="_blank"
     rel="noopener noreferrer"
+    id="boton-regalos"
   >
     Ver mesa de regalos
   </a>
@@ -3242,6 +3245,118 @@ const parametros = new URLSearchParams(window.location.search);
 const codigoInvitado = parametros.get("invitado");
 const tokenInvitado = parametros.get("token");
 
+// Identificar la invitación que se mostrará en alemán
+const idiomaInvitacion = codigoInvitado === "INV054" ? "de" : "es";
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (idiomaInvitacion === "de") {
+        document.getElementById("titulo-bienvenida").textContent =
+            "Mit Gottes Segen";
+
+        document.getElementById("texto-bienvenida").textContent =
+            "Wir haben uns entschieden, gemeinsam ein neues Kapitel unseres Lebens zu beginnen. Es erfüllt uns mit großer Freude, diesen besonderen Tag mit den Menschen zu teilen, die Teil unserer Geschichte sind.";
+
+        document.getElementById("mensaje-bienvenida").textContent =
+            "Es wäre uns eine große Ehre, dich an diesem besonderen Tag bei uns zu haben!";
+        document.getElementById("titulo-historia").textContent =
+            "Unsere Geschichte";
+        document.getElementById("texto-historia").textContent =
+            "«Manche Geschichten beginnen mit einer Begegnung und werden zu einer Liebe für die Ewigkeit…»";
+        document.getElementById("titulo-padres").textContent =
+            "Unsere Eltern";
+        document.getElementById("subtitulo-padres").textContent =
+            "MIT DER LIEBE UND DEM SEGEN UNSERER ELTERN";
+        document.getElementById("texto-padres").textContent =
+            "Mit ihrer Liebe, ihrem Vorbild und ihrem Segen begleiten sie uns auf dem Weg in diesen neuen Lebensabschnitt.";
+        document.getElementById("subtitulo-padrinos").textContent =
+            "VEREINT DURCH LIEBE UND GLAUBEN";
+        document.getElementById("titulo-padrinos").textContent =
+            "Unsere Trauzeugen";
+        document.getElementById("mensaje-padrinos").textContent =
+            "Mit Liebe und Dankbarkeit danken wir den Menschen, die uns als Zeugen unserer Verbindung vor Gott begleiten werden.";
+        document.getElementById("tipo-padrinos").textContent =
+            "Paten der kirchlichen Trauung";
+        document.getElementById("titulo-contador").textContent =
+            "Die Zeit vergeht, und unser gemeinsames Für immer beginnt in...";
+        
+        document.getElementById("etiqueta-dias").textContent = "Tage";
+        document.getElementById("etiqueta-horas").textContent = "Stunden";
+        document.getElementById("etiqueta-minutos").textContent = "Minuten";
+        document.getElementById("etiqueta-segundos").textContent = "Sekunden";
+
+        document.getElementById("mensaje-preparate").textContent =
+            "Mach dich bereit...";
+
+        document.getElementById("titulo-ceremonia").textContent =
+            "Kirchliche Trauung";
+        document.getElementById("texto-ceremonia").textContent =
+            "Vor Gott und im Kreise unserer Liebsten werden wir unseren Bund fürs Leben schließen, im Vertrauen darauf, dass sein Segen uns auf unserem gemeinsamen Lebensweg begleitet.";
+        document.getElementById("hora-ceremonia").textContent =
+            "17:00 Uhr";
+
+        document.getElementById("texto-ubicacion-ceremonia").textContent =
+            "Standort ansehen";
+
+        document.getElementById("titulo-recepcion").textContent =
+            "Hochzeitsfeier";
+        document.getElementById("texto-recepcion").textContent =
+            "Nachdem wir uns vor Gott das Jawort gegeben haben, beginnt die Feier. Wir freuen uns darauf, mit euch einen Abend voller Liebe, Lachen, Musik und unvergesslicher Momente zu verbringen.";
+        document.getElementById("hora-recepcion").textContent =
+            "20:00 Uhr";
+
+        document.getElementById("texto-ubicacion-recepcion").textContent =
+            "Standort ansehen";
+
+        document.getElementById("subtitulo-vestimenta").textContent =
+            "FÜR DIESEN BESONDEREN ANLASS";
+        document.getElementById("titulo-vestimenta").textContent =
+            "Dresscode";
+        document.getElementById("tipo-vestimenta").textContent =
+            "Festliche Kleidung";
+        document.getElementById("nota-vestimenta").textContent =
+            "Wir bitten euch, die Farbe Dunkelblau ausschließlich unseren Brautjungfern und Ehrenbegleitern vorzubehalten."; 
+
+        document.getElementById("titulo-regalos").textContent =
+            "Hochzeitsgeschenke";
+        document.getElementById("mensaje-regalos").textContent =
+            "Wir beginnen bald, uns ein gemeinsames Zuhause voller Liebe aufzubauen. Das Wertvollste für uns ist, diesen besonderen Moment mit unseren Liebsten zu teilen. Falls ihr uns zu diesem neuen Lebensabschnitt mit einem Geschenk eine Freude machen möchtet, haben wir mit viel Liebe eine Hochzeitswunschliste zusammengestellt.";
+        document.getElementById("boton-regalos").textContent =
+            "Wunschliste ansehen";    
+
+        document.getElementById("titulo-confirmacion").textContent =
+            "Teilnahmebestätigung";
+        document.getElementById("texto-confirmacion").textContent =
+            "Wir würden uns sehr freuen, diesen besonderen Tag mit euch zu verbringen. Bitte bestätigt uns, ob ihr dabei sein werdet.";
+        document.getElementById("pregunta-asistentes").textContent =
+            "Wie viele Personen werden teilnehmen?";
+        document.getElementById("boton-confirmar").textContent =
+            "Teilnahme bestätigen";
+        document.getElementById("nombre-confirmacion").textContent =
+            "Name des Gastes";
+        document.getElementById("pases-confirmacion").textContent =
+            "Zugewiesene Plätze";
+        document.querySelector("#cantidad-asistentes option[value='']").textContent =
+            "Bitte auswählen";
+
+        document.getElementById("mensaje-agradecimiento").textContent =
+            "Vielen Dank für deine Rückmeldung! Es bedeutet uns sehr viel, diesen besonderen Moment mit dir zu teilen. In Liebe, Kimberly & Andrés.";
+        document.getElementById("boton-ver-pase").textContent =
+            "♡ Meine Eintrittskarte ansehen";
+    }
+});
+
+// Traducir el título de la portada para INV054
+document.addEventListener("DOMContentLoaded", function () {
+    if (idiomaInvitacion === "de") {
+        document.getElementById("titulo-boda").textContent = "Unsere Hochzeit";
+        document.getElementById("titulo-boda").style.backgroundImage = "none";
+        document.getElementById("titulo-boda").style.webkitTextFillColor = "#526783";
+        document.getElementById("texto-deslizar").textContent = "Wische, um mehr zu entdecken";
+        document.documentElement.lang = "de";
+        document.getElementById("mes-portada").textContent = "DEZEMBER";
+        document.getElementById("dia-portada").textContent = "SAMSTAG";
+    }
+});
 
 // Buscar sus datos
 let invitadoActual = null;
@@ -3262,7 +3377,50 @@ function recibirInvitado(datos) {
     mostrarDatosInvitado();
     mostrarDatosConfirmacion();
     actualizarOpcionesAsistencia();
+    consultarConfirmacionAlAbrir();
 }
+
+function recibirConfirmacionExistente(datos) {
+    if (!datos || !datos.ok || !datos.registrada) {
+        return;
+    }
+
+    document.getElementById("mensaje-agradecimiento").style.display = "block";
+
+    if (Number(datos.pasesConfirmados) > 0) {
+        document.getElementById("boton-ver-pase").style.display = "block";
+    }
+
+    document.getElementById("boton-confirmar").disabled = true;
+    document.getElementById("cantidad-asistentes").disabled = true;
+}
+
+
+function consultarConfirmacionAlAbrir() {
+    if (!tokenInvitado || !invitadoActual) return;
+
+    const script = document.createElement("script");
+    const url = new URL(URL_CONFIRMACIONES);
+    const nombreCallback = "recibirConfirmacionExistente";
+
+    url.searchParams.set("pagina", "verificar");
+    url.searchParams.set("token", tokenInvitado);
+    url.searchParams.set("callback", nombreCallback);
+
+    script.src = url.toString();
+
+    script.onerror = function () {
+        console.error("No se pudo consultar la confirmación existente.");
+        script.remove();
+    };
+
+    script.onload = function () {
+        script.remove();
+    };
+
+    document.body.appendChild(script);
+}
+
 function mostrarDatosInvitado() {
     if (!invitadoActual) return;
 
@@ -3288,23 +3446,37 @@ function mostrarDatosConfirmacion() {
 const adultos = Number(invitadoActual.adultos) || 0;
 const ninos = Number(invitadoActual.ninos) || 0;
 
-const textoTotal = totalPases === 1
-    ? "1 pase asignado"
-    : `${totalPases} pases asignados`;
+
+const textoTotal = idiomaInvitacion === "de"
+    ? (totalPases === 1
+        ? "1 zugewiesener Platz"
+        : `${totalPases} zugewiesene Plätze`)
+    : (totalPases === 1
+        ? "1 pase asignado"
+        : `${totalPases} pases asignados`);
 
 const desglose = [];
 
+
 if (adultos > 0) {
-    desglose.push(`${adultos} ${adultos === 1 ? "adulto" : "adultos"}`);
+    desglose.push(
+        idiomaInvitacion === "de"
+            ? `${adultos} ${adultos === 1 ? "Erwachsener" : "Erwachsene"}`
+            : `${adultos} ${adultos === 1 ? "adulto" : "adultos"}`
+    );
 }
 
 if (ninos > 0) {
-    desglose.push(`${ninos} ${ninos === 1 ? "niño" : "niños"}`);
+    desglose.push(
+        idiomaInvitacion === "de"
+            ? `${ninos} ${ninos === 1 ? "Kind" : "Kinder"}`
+            : `${ninos} ${ninos === 1 ? "niño" : "niños"}`
+    );
 }
 
 document.getElementById("pases-confirmacion").textContent =
     desglose.length > 0
-        ? `${textoTotal} · ${desglose.join(" y ")}`
+        ? `${textoTotal} · ${desglose.join(idiomaInvitacion === "de" ? " und " : " y ")}`
         : textoTotal;
 }
 
@@ -3318,7 +3490,9 @@ function actualizarOpcionesAsistencia() {
     selector.innerHTML = "";
     const opcionInicial = document.createElement("option");
 opcionInicial.value = "";
-opcionInicial.textContent = "Selecciona una opción";
+opcionInicial.textContent = idiomaInvitacion === "de"
+    ? "Bitte auswählen"
+    : "Selecciona una opción";
 opcionInicial.disabled = true;
 opcionInicial.selected = true;
 selector.appendChild(opcionInicial);
@@ -3326,14 +3500,18 @@ selector.appendChild(opcionInicial);
     // Opción para quienes no podrán asistir
     const noAsistire = document.createElement("option");
     noAsistire.value = "0";
-    noAsistire.textContent = "No podré asistir";
+    noAsistire.textContent = idiomaInvitacion === "de"
+    ? "Ich kann leider nicht teilnehmen"
+    : "No podré asistir";
     selector.appendChild(noAsistire);
 
     // Opciones de 1 hasta el máximo de pases
     for (let i = 1; i <= invitadoActual.pases; i++) {
         const opcion = document.createElement("option");
         opcion.value = i;
-        opcion.textContent = i === 1 ? "1 pase" : `${i} pases`;
+        opcion.textContent = idiomaInvitacion === "de"
+    ? (i === 1 ? "1 Person" : `${i} Personen`)
+    : (i === 1 ? "1 pase" : `${i} pases`);
         selector.appendChild(opcion);
     }
 }
@@ -3391,6 +3569,15 @@ setInterval(actualizarContador, 1000);
 
 // Animación de la frase romántica
 const fraseAnimada = document.getElementById("frase-animada");
+const fraseReserva = document.querySelector(".frase-reserva");
+
+const textoAleman = "«Auf den Wegen des Lebens, durch alle Herausforderungen und im Laufe der Zeit findet die Liebe immer einen Weg, uns dorthin zu führen, wo unser Herz hingehört.»";
+
+if (codigoInvitado === "INV054") {
+    fraseReserva.textContent = textoAleman;
+    fraseAnimada.textContent = textoAleman;
+}
+
 const textoOriginal = fraseAnimada.textContent.trim();
 fraseAnimada.textContent = "";
 
@@ -3434,7 +3621,9 @@ const observadorFrase = new IntersectionObserver((entradas) => {
 /* Animación de escritura: Prepárate... */
 
 const mensajePreparate = document.getElementById("mensaje-preparate");
-const textoPreparate = "Prepárate...";
+const textoPreparate = idiomaInvitacion === "de"
+    ? "Mach dich bereit..."
+    : "Prepárate...";
 
 let temporizadorPreparate;
 let animacionPreparateIniciada = false;
@@ -3680,9 +3869,9 @@ botonAbrir.addEventListener('click', () => {
 
     <div class="contenido-confirmacion">
 
-        <h2>Confirmación de asistencia</h2>
+        <h2 id="titulo-confirmacion">Confirmación de asistencia</h2>
 
-        <p class="mensaje-confirmacion">
+        <p class="mensaje-confirmacion" id="texto-confirmacion">
             Nos llenará de alegría compartir este día tan especial
             con ustedes. Les agradeceremos confirmar su asistencia.
         </p>
@@ -3695,7 +3884,7 @@ botonAbrir.addEventListener('click', () => {
             Pases asignados
         </p>
 
-        <label for="cantidad-asistentes">
+        <label for="cantidad-asistentes" id="pregunta-asistentes">
             ¿Cuántas personas asistirán?
         </label>
 
@@ -3734,13 +3923,18 @@ const botonVerPase = document.getElementById("boton-ver-pase");
 
 botonVerPase.addEventListener("click", function () {
     if (!tokenInvitado) {
-        alert("No se encontró el pase de esta invitación.");
+        alert(
+    idiomaInvitacion === "de"
+        ? "Die Eintrittskarte für diese Einladung wurde nicht gefunden."
+        : "No se encontró el pase de esta invitación."
+);
         return;
     }
 
     const urlPase = new URL(URL_CONFIRMACIONES);
     urlPase.searchParams.set("pagina", "pase");
     urlPase.searchParams.set("token", tokenInvitado);
+    urlPase.searchParams.set("idioma", idiomaInvitacion);
 
     window.open(urlPase.toString(), "_blank", "noopener,noreferrer");
 });
@@ -3763,7 +3957,9 @@ function recibirVerificacionConfirmacion(datos) {
 
     const botonConfirmar = document.getElementById("boton-confirmar");
 botonConfirmar.disabled = false;
-botonConfirmar.textContent = "Confirmar asistencia";
+botonConfirmar.textContent = idiomaInvitacion === "de"
+    ? "Teilnahme bestätigen"
+    : "Confirmar asistencia";
 
   } else if(
     idEnvioPendiente &&
