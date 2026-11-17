@@ -2572,7 +2572,7 @@
 <!-- Tarjeta que saldrá del sobre -->
 <div class="tarjeta-invitacion" aria-hidden="true">
     <div class="contenido-tarjeta">
-        <p class="detalle-tarjeta">NUESTRA BODA</p>
+        <p class="detalle-tarjeta" id="titulo-tarjeta-sobre">NUESTRA BODA</p>
         <h2>Kimberly <span>&amp;</span> Andrés</h2>
         <p class="fecha-tarjeta">26 · 12 · 2026</p>
     </div>
@@ -3427,10 +3427,14 @@ function mostrarDatosInvitado() {
     document.getElementById("nombre-invitado").textContent =
         invitadoActual.nombre;
 
-    document.getElementById("pases-invitado").textContent =
-        invitadoActual.pases === 1
+   document.getElementById("pases-invitado").textContent =
+    idiomaInvitacion === "de"
+        ? (Number(invitadoActual.pases) === 1
+            ? "1 Platz"
+            : `${invitadoActual.pases} Plätze`)
+        : (Number(invitadoActual.pases) === 1
             ? "1 pase"
-            : `${invitadoActual.pases} pases`;
+            : `${invitadoActual.pases} pases`);
 }
 
 mostrarDatosInvitado();
@@ -3824,6 +3828,13 @@ eventosAnimados.forEach((evento) => {
 
 /* Abrir invitación desde la bienvenida */
 const botonAbrir = document.getElementById('abrir-invitacion');
+
+if (idiomaInvitacion === "de") {
+    botonAbrir.textContent = "Einladung öffnen";
+    document.getElementById("titulo-tarjeta-sobre").textContent = "UNSERE HOCHZEIT";
+    document.getElementById("nombre-invitado").textContent = "Deine Einladung wird vorbereitet...";
+}
+
 const pantallaBienvenida = document.getElementById('pantalla-bienvenida');
 
 
